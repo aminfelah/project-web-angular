@@ -116,6 +116,11 @@ html,body{
     z-index: 100000 ;
     
 }
+.navbar-background {
+    background-color: #565a5c;
+    
+}
+
 .wrapper {
     position: relative;
     z-index: -1;

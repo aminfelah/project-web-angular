@@ -40,7 +40,8 @@
               "src/assets/css/responsive.css"
             ],
             "scripts": [
-              "src/assets/js/jquery.js",
+              "src/assets/js/jquery-1.10.2.js",
+              "src/assets/js/jquery-ui.js",
               "src/assets/js/bootsnav.js",
               "src/assets/js/bootstrap.min.js",
               "src/assets/js/custom.js",

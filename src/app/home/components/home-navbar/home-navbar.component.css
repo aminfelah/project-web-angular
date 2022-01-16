@@ -1,0 +1,53 @@
+.home-navbar{
+    padding: 5% 10% 10% 10%;
+}
+.inside-home-navbar{
+    padding: 1% 20% 1% 10%;
+    border-radius: 10px;
+}
+
+.navbar-item{
+    font-family: "Heebo";
+    font-size: 14px;
+    align-self:center;
+}
+
+.navbar-item-active{
+    border-bottom: solid 2px #D31F49;
+    color: #D31F49;
+}
+
+.home-navbar-talk-to-us{
+    position:absolute;
+    margin-left: 77%;
+    margin-top: -13%;
+    background-color: #D31F49;
+    height: 80px;
+    width: 150px;
+    border: #D31F49;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #A20000 -2px 2px;
+    border-radius: 10px;
+}
+
+.square{
+    border: 1px solid white;
+    height: 20px;
+    width: 10px;
+    margin-left: 60px;
+    padding: 0px 2px;
+    margin-bottom: 10px;
+}
+
+.talk-to-us-title{
+    font-family: "Heebo";
+    font-size: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .home-navbar-talk-to-us{
+        display: none;
+    }
+}

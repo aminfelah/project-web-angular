@@ -1,0 +1,66 @@
+.services{
+    padding: 5%;
+}
+
+.services-hr{
+    width: 8%;
+    color: #EF2756;
+    opacity: 1;
+    margin-left: 46%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+.services-title{
+    font-family: "Heebo";
+    font-size: 70px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.services-subtitle{
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    font-family: "PT Serif";
+    margin-bottom: 5%;
+    color: #727272;
+}
+
+.service-title{
+    font-family: "Heebo";
+    font-size: 30px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.service-hr{
+    width: 15%;
+    color: #EF2756;
+    opacity: 1;
+}
+
+.service-text{
+    font-family: "Heebo";
+    font-size: 16px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 400px) {
+    .services-title{
+        font-size: 50px;
+    }
+    
+    .services-subtitle{
+        font-size: 14px;
+        padding: 20px;
+    }
+    
+    .service-title{
+        font-size: 22px;
+    }
+    
+    .service-text{
+        font-size: 14px;
+    }
+}

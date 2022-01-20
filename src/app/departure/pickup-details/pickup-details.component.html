@@ -1,0 +1,64 @@
+<div class="big_title">
+  Where shall we meet you?
+</div>
+<div class="main-form panel panel-default">
+  <div class="main-form__section main-form__section--body">
+    <h2 class="section-title section-title--tiny section-title--blue">
+      <b>Baggage Pick-up Details</b>
+      <br>
+    </h2>
+    <div class="main-form__row">
+      <div class="form-line">
+        <div class="input-block  input-block_animated">
+          <input type="text" name="departure_airport" autocomplete="off" value="">
+          <span class="input-block__placeholder">
+            Pick-up location (complete address)
+          </span>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="react-datepicker-wrapper">
+          <div class="react-datepicker__input-container">
+            <div class="input-block input-block_animated">
+              <input type="date" name="departure_date" autocomplete="off"  value="" style="width:21rem" >
+              <span class="input-block__placeholder ">
+                Pick-up date
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-line time-picker">
+        <div class="input-block input-block_animated ">
+          <input type="time" name="departure_time"  autocomplete="off" value="">
+          <span class="input-block__placeholder">
+            Pick-up time
+          </span>
+        </div>
+      </div>
+
+      <div class="form-line__helper">
+        To help us serve you better, we would appreciate if you mention: flight number, flight booking reservation number(s), number of passengers, specific address location, and any special baggage types
+      </div>
+      <div class="form-line time-picker">
+        <div class="input-block input-block_animated ">
+          <textarea matInput placeholder="Comments"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-form__section main-form__section--footer">
+    <div class="main-form__row">
+      <div class="column">
+        <button id="HCIBtnPrevStep1" type="button" class="btn btn-shadow secondary" (click)="previous()" >
+          Back
+        </button>
+      </div>
+      <div class="column text-right">
+        <button id="HCIBtnNextStep1" type="button" class="btn btn-shadow primary" (click)="next()">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

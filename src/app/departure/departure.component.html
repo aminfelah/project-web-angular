@@ -1,0 +1,18 @@
+<div class="section-form__intro">
+  <ul class="ul step-bar">
+    <a class="step-bar__step" *ngFor="let header of headers"  [routerLink]="['/departure/', header.link ]" >
+      <li class="step-bar__step " routerLinkActive="current">
+        <div class="step-point">
+          <div class="step-point__num">
+              {{header.id}}
+          </div>
+          <div class="step-point__name">
+              {{header.name}}
+          </div>
+        </div>
+      </li>
+    </a>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

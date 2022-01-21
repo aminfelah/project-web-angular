@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 
 @Component({
   selector: 'app-getting-started',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GettingStartedComponent implements OnInit {
 
+  @Output() idToEmit2 = new EventEmitter<string>();
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showId(id: any){
+    this.idToEmit2.emit(id);
+  }
 }

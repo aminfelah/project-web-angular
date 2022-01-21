@@ -7,23 +7,23 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"><p class="navbar-item navbar-item-active">HOME</p></a>
+              <a class="nav-link" routerLink=""><p class="navbar-item" (click)="navbarClicked('home')" [ngClass]="{'navbar-item-active' : id == 'home'}">HOME</p></a>
             </li>        
             <li class="nav-item">
-                <a class="nav-link" href="#"><p class="navbar-item">ABOUT</p></a>
+                <a class="nav-link" routerLink=""><p class="navbar-item" (click)="navbarClicked('about')" [ngClass]="{'navbar-item-active' : id == 'about'}">ABOUT</p></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><p class="navbar-item">REVIEWS</p></a>
+                <a class="nav-link" routerLink=""><p class="navbar-item" (click)="navbarClicked('reviews')" [ngClass]="{'navbar-item-active' : id == 'reviews'}">REVIEWS</p></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><p class="navbar-item">SERVICES</p></a>
+                <a class="nav-link" routerLink=""><p class="navbar-item" (click)="navbarClicked('services')" [ngClass]="{'navbar-item-active' : id == 'services'}">SERVICES</p></a>
             </li>
           </ul>
         </div>
     </nav>
 </div>
 
-<div class="btn btn-primary home-navbar-talk-to-us">
+<div class="btn btn-primary home-navbar-talk-to-us" (click)="navbarClicked('contact')">
   <div class="square"></div>
   <p class="talk-to-us-title">TALK TO US</p>
 </div>

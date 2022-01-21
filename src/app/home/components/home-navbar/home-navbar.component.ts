@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home-navbar',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-navbar.component.css']
 })
 export class HomeNavbarComponent implements OnInit {
+  
+  @Output() idToEmit = new EventEmitter<string>();
 
+  id: string = 'home';
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  navbarClicked(id: string){
+    this.id = id;
+    this.idToEmit.emit(id);
   }
 
 }

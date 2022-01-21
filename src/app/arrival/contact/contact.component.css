@@ -1,15 +1,3 @@
-.big_title{
-  color: #D31F49;
-  width: 100%;
-  margin-bottom: 3rem;
-  font-style: italic;
-  font-size: 2.8rem;
-  z-index: 10;
-  line-height: 1.2em;
-  font-family: Gotham-Medium,Arial,Helvetica Neue,Helvetica,sans-serif;
-  font-weight: bold;
-  text-align: center;
-}
 .section-form .main-form {
   color: #666;
 }
@@ -532,7 +520,6 @@ button {
 
 button {
     appearance: auto;
-    -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
     color: -internal-light-dark(black, white);
     letter-spacing: normal;
@@ -576,9 +563,22 @@ button {
 
 
 @media screen and (min-width: 768px){
-.custom-mobile-airline-message {
-    display: none;
-}}
+  .custom-mobile-airline-message {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .section-form .main-form__section.main-form__section--footer .main-form__row .btn {
+    font-size: 1.6rem;
+    line-height: 1.3em;
+    padding: 1.4rem;
+  }
+  .form-line__helper {
+    font-size: 1.3rem !important;
+
+  }
+}
 
 @media screen and (max-width: 1024px)
 {.section-form .main-form__section.main-form__section--footer .main-form__row .btn {
@@ -587,15 +587,49 @@ button {
     padding: 1.4rem;
 }}
 
-@media screen and (max-width: 1024px){
-  .section-form .main-form__section.main-form__section--footer .main-form__row .btn {
-    font-size: 1.6rem;
-    line-height: 1.3em;
-    padding: 1.4rem;
-  }
-  .big_title{
-    font-size: 2.2rem;
-  }
+
+.form-line__helper {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  color: #666;
+  text-align: justify;
+}
+
+.input-block {
+  position: relative;
+}
+
+.input-block textarea {
+  display: block;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 5rem 1rem 2rem;
+  font-family: Gotham-Book,Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #333;
+  border: 1px solid #9b9b9b;
+  border-radius: 5px;
+  background-color: initial;
+  min-height: 12rem;
+  height: 12rem;
+  resize: none;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+input[type=password], input[type=text], textarea {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+button, input, select, textarea {
+  margin: 0;
+  outline: none;
 }
 
 @media screen and (max-width: 731px){
@@ -606,5 +640,11 @@ button {
     position: relative;
     left:20%;
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .big_title{
+    font-size: 2.2rem;
   }
 }

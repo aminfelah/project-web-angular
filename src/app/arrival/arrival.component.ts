@@ -12,4 +12,11 @@ export class ArrivalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  headers=[
+    {id:1, name:"Arrival Details", link:"details"},
+    {id:2, name:"Drop-off Details", link:"dropoff"},
+    {id:3, name:"Contact Details", link:"contact"},
+    {id:4, name:"Payment Details", link:"payment"}
+  ]
+
 }

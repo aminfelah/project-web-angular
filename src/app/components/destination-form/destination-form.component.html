@@ -1,0 +1,678 @@
+<!--travel-box start-->
+<section class="travel-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="single-travel-boxes">
+          <div id="desc-tabs" class="desc-tabs">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active">
+                <a
+                  href="#tours"
+                  aria-controls="tours"
+                  role="tab"
+                  data-toggle="tab"
+                >
+                  <i class="fa fa-tree"></i>
+                  tours
+                </a>
+              </li>
+
+              <li role="presentation">
+                <a
+                  href="#hotels"
+                  aria-controls="hotels"
+                  role="tab"
+                  data-toggle="tab"
+                >
+                  <i class="fa fa-building"></i>
+                  hotels
+                </a>
+              </li>
+
+              <li role="presentation">
+                <a
+                  href="#flights"
+                  aria-controls="flights"
+                  role="tab"
+                  data-toggle="tab"
+                >
+                  <i class="fa fa-plane"></i>
+                  flights
+                </a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active fade in" id="tours">
+                <div class="tab-para">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <div class="single-tab-select-box">
+                        <h2>destination</h2>
+
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">
+                              enter your destination country
+                            </option>
+                            <!-- /.option-->
+
+                            <option value="turkey">turkey</option>
+                            <!-- /.option-->
+
+                            <option value="russia">russia</option>
+                            <!-- /.option-->
+                            <option value="egept">egypt</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">
+                              enter your destination location
+                            </option>
+                            <!-- /.option-->
+
+                            <option value="istambul">istambul</option>
+                            <!-- /.option-->
+
+                            <option value="mosko">mosko</option>
+                            <!-- /.option-->
+                            <option value="cairo">cairo</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>check in</h2>
+                        <div class="travel-check-icon">
+                          <form action="#">
+                            <input
+                              type="text"
+                              name="check_in"
+                              class="form-control"
+                              data-toggle="datepicker"
+                              placeholder="12 -01 - 2017 "
+                            />
+                          </form>
+                        </div>
+                        <!-- /.travel-check-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>check out</h2>
+                        <div class="travel-check-icon">
+                          <form action="#">
+                            <input
+                              type="text"
+                              name="check_out"
+                              class="form-control"
+                              data-toggle="datepicker"
+                              placeholder="22 -01 - 2017 "
+                            />
+                          </form>
+                        </div>
+                        <!-- /.travel-check-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-1 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>duration</h2>
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">5</option>
+                            <!-- /.option-->
+
+                            <option value="10">10</option>
+                            <!-- /.option-->
+
+                            <option value="15">15</option>
+                            <!-- /.option-->
+                            <option value="20">20</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-1 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>members</h2>
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">1</option>
+                            <!-- /.option-->
+
+                            <option value="2">2</option>
+                            <!-- /.option-->
+
+                            <option value="4">4</option>
+                            <!-- /.option-->
+                            <option value="8">8</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="travel-budget">
+                        <div class="row">
+                          <div class="col-md-3 col-sm-4">
+                            <h3>budget :</h3>
+                          </div>
+                          <!--/.col-->
+                          <div class="co-md-9 col-sm-8">
+                            <div class="travel-filter">
+                              <div class="info_widget">
+                                <div class="price_filter">
+                                  <div id="slider-range"></div>
+                                  <!--/.slider-range-->
+
+                                  <div class="price_slider_amount">
+                                    <input
+                                      type="text"
+                                      id="amount"
+                                      name="price"
+                                      placeholder="Add Your Price"
+                                    />
+                                  </div>
+                                  <!--/.price_slider_amount-->
+                                </div>
+                                <!--/.price-filter-->
+                              </div>
+                              <!--/.info_widget-->
+                            </div>
+                            <!--/.travel-filter-->
+                          </div>
+                          <!--/.col-->
+                        </div>
+                        <!--/.row-->
+                      </div>
+                      <!--/.travel-budget-->
+                    </div>
+                    <!--/.col-->
+                    <div class="clo-sm-7">
+                      <div class="about-btn travel-mrt-0 pull-right">
+                        <button class="about-view travel-btn">search</button
+                        ><!--/.travel-btn-->
+                      </div>
+                      <!--/.about-btn-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                </div>
+                <!--/.tab-para-->
+              </div>
+              <!--/.tabpannel-->
+
+              <div role="tabpanel" class="tab-pane fade in" id="hotels">
+                <div class="tab-para">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <div class="single-tab-select-box">
+                        <h2>destination</h2>
+
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">
+                              enter your destination country
+                            </option>
+                            <!-- /.option-->
+
+                            <option value="turkey">turkey</option>
+                            <!-- /.option-->
+
+                            <option value="russia">russia</option>
+                            <!-- /.option-->
+                            <option value="egept">egypt</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">
+                              enter your destination location
+                            </option>
+                            <!-- /.option-->
+
+                            <option value="istambul">istambul</option>
+                            <!-- /.option-->
+
+                            <option value="mosko">mosko</option>
+                            <!-- /.option-->
+                            <option value="cairo">cairo</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>check in</h2>
+                        <div class="travel-check-icon">
+                          <form action="#">
+                            <input
+                              type="text"
+                              name="check_in"
+                              class="form-control"
+                              data-toggle="datepicker"
+                              placeholder="12 -01 - 2017 "
+                            />
+                          </form>
+                        </div>
+                        <!-- /.travel-check-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>check out</h2>
+                        <div class="travel-check-icon">
+                          <form action="#">
+                            <input
+                              type="text"
+                              name="check_out"
+                              class="form-control"
+                              data-toggle="datepicker"
+                              placeholder="22 -01 - 2017 "
+                            />
+                          </form>
+                        </div>
+                        <!-- /.travel-check-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-1 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>duration</h2>
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">5</option>
+                            <!-- /.option-->
+
+                            <option value="10">10</option>
+                            <!-- /.option-->
+
+                            <option value="15">15</option>
+                            <!-- /.option-->
+                            <option value="20">20</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-1 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>members</h2>
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">1</option>
+                            <!-- /.option-->
+
+                            <option value="2">2</option>
+                            <!-- /.option-->
+
+                            <option value="4">4</option>
+                            <!-- /.option-->
+                            <option value="8">8</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+
+                  <div class="row">
+                    <div class="col-sm-5"></div>
+                    <!--/.col-->
+                    <div class="clo-sm-7">
+                      <div class="about-btn travel-mrt-0 pull-right">
+                        <button class="about-view travel-btn">search</button
+                        ><!--/.travel-btn-->
+                      </div>
+                      <!--/.about-btn-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                </div>
+                <!--/.tab-para-->
+              </div>
+              <!--/.tabpannel-->
+
+              <div role="tabpanel" class="tab-pane fade in" id="flights">
+                <div class="tab-para">
+                  <div class="trip-circle">
+                    <div class="single-trip-circle">
+                      <input type="radio" id="radio01" name="radio" />
+                      <label for="radio01">
+                        <span class="round-boarder">
+                          <span class="round-boarder1"></span> </span
+                        >round trip
+                      </label>
+                    </div>
+                    <!--/.single-trip-circle-->
+                    <div class="single-trip-circle">
+                      <input type="radio" id="radio02" name="radio" />
+                      <label for="radio02">
+                        <span class="round-boarder">
+                          <span class="round-boarder1"></span> </span
+                        >on way
+                      </label>
+                    </div>
+                    <!--/.single-trip-circle-->
+                  </div>
+                  <!--/.trip-circle-->
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <div class="single-tab-select-box">
+                        <h2>from</h2>
+
+                        <div class="travel-select-icon">
+                          <select class="form-control" [(ngModel)]="dep">
+                            <option value="TUN">tunisia</option>
+                            <option value="CDG">france</option>
+                            <option value="FRA">germany</option>
+                            <option value="FCO">italy</option>
+                            <option value="BCN">spain</option>
+                            <option value="LAX">usa</option>
+                            <option value="YOW">canada</option>
+                            <option value="OXF">uk</option>
+                            <option value="LIS">portugal</option>
+                            <option value="DIA">qatar</option>
+                            <option value="DXB">dubai</option>
+                            <option value="JED">saudi arbia</option>
+                            <option value="AUH">UAE</option>
+                            <option value="IST">turkey</option>
+                            <option value="CMN">maghreb</option>
+                            <option value="GJL">algeria</option>
+                            <option value="SVO">russia</option>
+                            <option value="CAI">egypt</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>departure</h2>
+                        <div class="travel-check-icon">
+                          <form action="#">
+                            <input
+                              type="text"
+                              name="departure"
+                              class="form-control"
+                              data-toggle="datepicker"
+                              placeholder="2022-01-27"
+                              [(ngModel)]="date"
+                            />
+                          </form>
+                        </div>
+                        <!-- /.travel-check-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>return</h2>
+                        <div class="travel-check-icon">
+                          <form action="#">
+                            <input
+                              type="text"
+                              name="return"
+                              class="form-control"
+                              data-toggle="datepicker"
+                              placeholder="2022-01-27"
+                            />
+                          </form>
+                        </div>
+                        <!-- /.travel-check-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-1 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>adults</h2>
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">5</option>
+                            <!-- /.option-->
+
+                            <option value="10">10</option>
+                            <!-- /.option-->
+
+                            <option value="15">15</option>
+                            <!-- /.option-->
+                            <option value="20">20</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-2 col-md-1 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>childs</h2>
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">1</option>
+                            <!-- /.option-->
+
+                            <option value="2">2</option>
+                            <!-- /.option-->
+
+                            <option value="4">4</option>
+                            <!-- /.option-->
+                            <option value="8">8</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <div class="single-tab-select-box">
+                        <h2>to</h2>
+
+                        <div class="travel-select-icon">
+                          <select class="form-control" [(ngModel)]="arv">
+                            <option value="TUN">tunisia</option>
+                            <option value="CDG">france</option>
+                            <option value="FRA">germany</option>
+                            <option value="FCO">italy</option>
+                            <option value="BCN">spain</option>
+                            <option value="LAX">usa</option>
+                            <option value="YOW">canada</option>
+                            <option value="OXF">uk</option>
+                            <option value="LIS">portugal</option>
+                            <option value="DIA">qatar</option>
+                            <option value="DXB">dubai</option>
+                            <option value="JED">saudi arbia</option>
+                            <option value="AUH">UAE</option>
+                            <option value="IST">turkey</option>
+                            <option value="CMN">maghreb</option>
+                            <option value="GJL">algeria</option>
+                            <option value="SVO">russia</option>
+                            <option value="CAI">egypt</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+                    <div class="col-lg-3 col-md-3 col-sm-4">
+                      <div class="single-tab-select-box">
+                        <h2>class</h2>
+                        <div class="travel-select-icon">
+                          <select class="form-control">
+                            <option value="default">enter class</option>
+                            <!-- /.option-->
+
+                            <option value="A">A</option>
+                            <!-- /.option-->
+
+                            <option value="B">B</option>
+                            <!-- /.option-->
+                            <option value="C">C</option>
+                            <!-- /.option--></select
+                          ><!-- /.select-->
+                        </div>
+                        <!-- /.travel-select-icon -->
+                      </div>
+                      <!--/.single-tab-select-box-->
+                    </div>
+                    <!--/.col-->
+                    <div class="clo-sm-5">
+                      <div class="about-btn pull-right">
+                        <button
+                          class="about-view travel-btn"
+                          (click)="submitform()"
+                        >
+                          search</button
+                        ><!--/.travel-btn-->
+                      </div>
+                      <!--/.about-btn-->
+                    </div>
+                    <!--/.col-->
+                  </div>
+                  <!--/.row-->
+                </div>
+              </div>
+              <!--/.tabpannel-->
+            </div>
+            <!--/.tab content-->
+          </div>
+          <!--/.desc-tabs-->
+        </div>
+        <!--/.single-travel-box-->
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.row-->
+  </div>
+  <!--/.container-->
+</section>
+<!---loading --->
+<div *ngIf="beginsearch && !flightTickets" class="loading-center">
+<div class="loadingio-spinner-spinner-i9vng1mw9t ">
+  <div class="ldio-dexcxy0pur">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+</div>
+<!--/.travel-box-->
+<div *ngIf="flightTickets" class="offers_item rating_5">
+  <div *ngFor="let ticket of flightTickets">
+    <div class="row margin-ticket">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8 border-style">
+        <div class="offers_content">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="{{ ticket.airlinepic }}" />
+            </div>
+            <div class="col-lg-6">
+              <div class="offers_price">
+                {{ ticket.price }}<span>per flight</span>
+              </div>
+              <div class="rating_r rating_r_5 offers_rating" data-rating="5">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <p class="offers_text">
+                the departure time {{ ticket.departuretime }} and the arrival
+                time
+                {{ ticket.arrivaltime }}
+              </p>
+              <br />
+              <p class="offers_text">
+                {{ ticket.airline }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--travel-box end-->
+</div>

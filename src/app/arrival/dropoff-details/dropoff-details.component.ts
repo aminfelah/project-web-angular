@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
+import { ArrivalOrderService } from 'src/app/common/services/arrival-order.service';
 
 @Component({
   selector: 'app-dropoff-details',
@@ -8,7 +10,15 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class DropoffDetailsComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  droppOffDetailsForm=this.formBuilder.group({
+    adress: ['',Validators.required],
+    dropOffDate:['',Validators.required],
+    dropOffTime:['',Validators.required],
+    dropOffComment:['',Validators.required],
+  })
+  constructor(private formBuilder:FormBuilder,
+              private router:Router,
+              private arrivalService: ArrivalOrderService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {
@@ -19,11 +29,18 @@ export class DropoffDetailsComponent implements OnInit {
     });
   }
 
-  next(){
-    this.router.navigate(['/arrival/contact'])
-  }
   previous(){
     this.router.navigate(['/arrival/details'])
+  }
+
+  onSubmit(){
+    this.arrivalService.updateDropOffdetails({
+      address: this.droppOffDetailsForm.controls['adress'].value,
+      datePickUpOrDropOff: this.droppOffDetailsForm.controls['dropOffDate'].value,
+      timePickUpOrDropOff: this.droppOffDetailsForm.controls['dropOffTime'].value,
+      comment: this.droppOffDetailsForm.controls['dropOffComment'].value,
+    })
+    this.router.navigate(['/arrival/contact'])
   }
 
 }

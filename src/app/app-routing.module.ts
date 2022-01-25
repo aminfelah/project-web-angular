@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArrivalDetailsComponent } from './arrival/arrival-details/arrival-details.component';
@@ -32,8 +31,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), CommonModule],
-  exports: [RouterModule,ForfaitsComponent],
-  declarations:[ForfaitsComponent]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

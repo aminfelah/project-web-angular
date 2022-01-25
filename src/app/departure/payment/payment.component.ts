@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
+import { DepartureOrderService } from 'src/app/common/services/departure-order.service';
 
 @Component({
   selector: 'app-payment',
@@ -8,7 +10,14 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  paymentForm=this.formBuilder.group({
+    price: [200],
+    paymentMethod: ['',Validators.required]
+  })
+
+  constructor(private formBuilder: FormBuilder,
+              private router:Router,
+              private departureService: DepartureOrderService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {
@@ -20,6 +29,13 @@ export class PaymentComponent implements OnInit {
   }
   previous(){
     this.router.navigate(['/departure/contact'])
+  }
+
+  onSubmit(){
+    this.departureService.updatePaymentdetails({
+      price: this.paymentForm.controls['price'].value,
+      paymentMethod: this.paymentForm.controls['paymentMethod'].value
+    })
   }
 
 }

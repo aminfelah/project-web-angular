@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
+import { ArrivalOrderService } from 'src/app/common/services/arrival-order.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +10,15 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  contactForm=this.formBuilder.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    email: ['', Validators.required],
+    phoneNumber: ['', Validators.required]
+  });
+  constructor(private formBuilder: FormBuilder ,
+              private router:Router,
+              private arrivalService: ArrivalOrderService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {
@@ -19,7 +29,13 @@ export class ContactComponent implements OnInit {
   });
   }
 
-  next(){
+  onSubmit(){
+    this.arrivalService.updateContactdetails({
+      firstName: this.contactForm.controls['firstName'].value,
+      lastName: this.contactForm.controls['lastName'].value,
+      email: this.contactForm.controls['email'].value,
+      phoneNumber: this.contactForm.controls['phoneNumber'].value
+    })
     this.router.navigate(['/arrival/payment'])
   }
   previous(){

@@ -1,3 +1,4 @@
+<form [formGroup]="contactForm"   (ngSubmit)="onSubmit()">
 <div class="big_title">
   How can we contact you?
 </div>
@@ -11,7 +12,7 @@
 
       <div class="form-line">
         <div class="input-block  input-block_animated">
-          <input type="text" name="first_name" autocomplete="off" value="">
+          <input type="text" name="first_name" autocomplete="off" formControlName="firstName">
           <span class="input-block__placeholder">
             First Name
           </span>
@@ -20,7 +21,7 @@
 
       <div class="form-line">
         <div class="input-block  input-block_animated">
-          <input type="text" name="last_namet" autocomplete="off" value="">
+          <input type="text" name="last_namet" autocomplete="off" formControlName="lastName">
           <span class="input-block__placeholder">
             Last Name
           </span>
@@ -29,7 +30,7 @@
 
       <div class="form-line">
         <div class="input-block  input-block_animated">
-          <input type="email" name="email" autocomplete="off" value="">
+          <input type="email" name="email" autocomplete="off" formControlName="email">
           <span class="input-block__placeholder">
             Email
           </span>
@@ -38,7 +39,7 @@
 
       <div class="form-line">
         <div class="input-block  input-block_animated">
-          <input type="tel" name="telephone" autocomplete="off" value="">
+          <input type="tel" name="telephone" autocomplete="off" formControlName="phoneNumber">
           <span class="input-block__placeholder">
             Phone Number
           </span>
@@ -56,10 +57,11 @@
         </button>
       </div>
       <div class="column text-right">
-        <button id="HCIBtnNextStep1" type="button" class="btn btn-shadow primary" (click)="next()">
+        <button id="HCIBtnNextStep1" type="submit" class="btn btn-shadow primary" >
           Next
         </button>
       </div>
     </div>
   </div>
 </div>
+</form>

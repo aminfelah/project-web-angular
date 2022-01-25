@@ -1,3 +1,4 @@
+<form [formGroup]="forfaitForm" (ngSubmit)="onSubmit()">
 <div class="forfaits">
  <ul class="prices-plans r-row r-row--mobile">
 <!--//////////////////////// Package1 /////////////////////////////////-->
@@ -8,7 +9,7 @@
           <span>(209 DT)</span>
         </h4>
         <span style="display: inline-block; margin-top: 0.5rem;">
-          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;" class="subtitle">
+          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;" class="subtitle">
             Travel hassle-free and baggage-free
           </p>
         </span>
@@ -18,7 +19,7 @@
             <ul class="price-plan__info">
               <li class="text-left">
                 Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;">
+                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
                   checked-in
                 </span>
                 to your flight, with boarding pass and baggage tag handover at home.
@@ -59,7 +60,7 @@
           <span>(249 DT)</span>
         </h4>
         <span style="display: inline-block; margin-top: 0.5rem;">
-          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;" class="subtitle">
+          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;" class="subtitle">
             Protect your bags
           </p>
         </span>
@@ -68,14 +69,14 @@
             <ul class="price-plan__info">
               <li class="text-left">
                 Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;">
+                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
                   checked-in
                 </span>
                 to your flight, with boarding pass and baggage tag handover at home.
               </li>
               <li class="text-left">
                 Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;">
+                <span style="color: #D31F49; font-family: Gotham-Medium, Arial,Helvetica Neue, Helvetica, sans-serif;">
                   disinfected with a long-lasting protective coating
                 </span>
               </li>
@@ -115,7 +116,7 @@
           <span>(479 DT)</span>
         </h4>
         <span style="display: inline-block; margin-top: 0.5rem;">
-          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;" class="subtitle">
+          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;" class="subtitle">
             Fast-track through the airport
           </p>
         </span>
@@ -124,20 +125,20 @@
             <ul class="price-plan__info">
               <li class="text-left">
                 Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;">
+                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
                   checked-in
                 </span>
                 to your flight, with boarding pass and baggage tag handover at home.
               </li>
               <li class="text-left">
                 Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;">
+                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
                   disinfected with a long-lasting protective coating
                 </span>
               </li>
               <li class="text-left">
                 Speed through the airport with
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;">
+                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
                   marhaba fast-track
                 </span>
               </li>
@@ -196,7 +197,7 @@
                 <div class="checkbox-block">
 
                   <div class="checkbox-block__wrapper">
-                    <input type="checkbox" id="{{service.name}}"  >
+                    <input type="checkbox" id="{{service.id}}"  formControlName="{{service.id}}" >
                     <span class="checkbox-block__mark">
                       <svg class="svg-icon" viewBox="0 0 500 500" width="100%" height="100%">
                         <path d="M492.7,76.1c-9.8-9.6-25.6-9.6-35.4,0L157.8,370.7L42.7,257.5c-9.8-9.6-25.6-9.6-35.4,0				c-9.8,9.6-9.8,25.2,0,34.8l132.8,130.6c9.8,9.6,25.6,9.6,35.4,0l317.2-311.9C502.4,101.3,502.4,85.7,492.7,76.1z"></path>
@@ -265,10 +266,11 @@
   <div class="main-form__section main-form__section--footer">
     <div class="main-form__row">
       <div class="column text-right">
-        <button id="HCIBtnNextStep0" type="button" class="btn btn-shadow primary" (click)="next()">
+        <button id="HCIBtnNextStep0" type="submit" class="btn btn-shadow primary">
           Next
         </button>
       </div>
     </div>
   </div>
 </div>
+</form>

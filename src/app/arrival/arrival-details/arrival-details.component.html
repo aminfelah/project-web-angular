@@ -1,3 +1,4 @@
+<form [formGroup]="arrivalDetailsForm" (ngSubmit)="onSubmit()">
 <div class="main-form panel panel-default">
   <div class="main-form__section main-form__section--body">
     <h2 class="section-title section-title--tiny section-title--blue">
@@ -8,13 +9,13 @@
     <div class="form-line">
       <div class="text-block box info-box">
         <div class="box__content">
-          <p style="color: #3F1B4B; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; margin-bottom: 1rem;">
+          <p style="color: #3F1B4B; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif; margin-bottom: 1rem;">
             Arrive at the Airport and proceed straight to your home or hotel and let us take care of your bags!
           </p>
-          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; margin-bottom: 1rem;">
+          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif; margin-bottom: 1rem;">
             We will collect your baggage, clear it through customs and deliver it to wherever you are in Tunisia!
           </p>
-          <p style="color: #3F1B4B; font-family: Gotham-Medium, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; margin-bottom: 1rem;">
+          <p style="color: #3F1B4B; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif; margin-bottom: 1rem;">
             We'll also sanitize your baggage before handover to you.
           </p>
         </div>
@@ -32,7 +33,7 @@
     <div class="main-form__row">
       <div class="form-line">
         <div class="input-block  input-block_animated">
-          <input type="text" name="departure_airport" autocomplete="off" value="">
+          <input type="text" name="departure_airport" autocomplete="off" formControlName="airline">
           <span class="input-block__placeholder">
             Airline
           </span>
@@ -42,7 +43,7 @@
         <div class="react-datepicker-wrapper">
           <div class="react-datepicker__input-container">
             <div class="input-block input-block_animated">
-              <input type="date" name="departure_date" autocomplete="off"  value="" style="width:21rem" >
+              <input type="date" name="departure_date" autocomplete="off" style="width:21rem" formControlName="arrivalDate">
               <span class="input-block__placeholder ">
                 Arrival Date
               </span>
@@ -52,7 +53,7 @@
       </div>
       <div class="form-line time-picker">
         <div class="input-block input-block_animated ">
-          <input type="time" name="departure_time"  autocomplete="off" value="">
+          <input type="time" name="departure_time"  autocomplete="off" formControlName="arrivalTime">
           <span class="input-block__placeholder">
             Arrival Time
           </span>
@@ -63,7 +64,7 @@
       </div>
       <div class="form-line time-picker">
         <div class="input-block input-block_animated ">
-          <textarea matInput placeholder="Comments"></textarea>
+          <textarea matInput placeholder="Comments" formControlName="comment"></textarea>
         </div>
       </div>
     </div>
@@ -72,11 +73,11 @@
   <div class="main-form__section main-form__section--footer">
     <div class="main-form__row">
       <div class="column text-right">
-        <button id="HCIBtnNextStep1" type="button" class="btn btn-shadow primary" (click)="next()">
+        <button id="HCIBtnNextStep1" type="submit" class="btn btn-shadow primary" >
           Next
         </button>
       </div>
     </div>
   </div>
-
 </div>
+</form>

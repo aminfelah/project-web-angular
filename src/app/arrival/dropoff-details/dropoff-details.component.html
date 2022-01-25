@@ -1,3 +1,4 @@
+<form [formGroup]="droppOffDetailsForm" (ngSubmit)="onSubmit()">
 <div class="main-form panel panel-default">
   <div class="main-form__section main-form__section--body">
     <h2 class="section-title section-title--tiny section-title--blue">
@@ -7,7 +8,7 @@
     <div class="main-form__row">
       <div class="form-line">
         <div class="input-block  input-block_animated">
-          <input type="text" name="departure_airport" autocomplete="off" value="">
+          <input type="text" name="departure_airport" autocomplete="off" formControlName="adress">
           <span class="input-block__placeholder">
             Drop-off Location
           </span>
@@ -17,7 +18,7 @@
         <div class="react-datepicker-wrapper">
           <div class="react-datepicker__input-container">
             <div class="input-block input-block_animated">
-              <input type="date" name="departure_date" autocomplete="off"  value="" style="width:21rem" >
+              <input type="date" name="departure_date" autocomplete="off"  formControlName="dropOffDate" style="width:21rem" >
               <span class="input-block__placeholder ">
                 Drop-off Date
               </span>
@@ -27,7 +28,7 @@
       </div>
       <div class="form-line time-picker">
         <div class="input-block input-block_animated ">
-          <input type="time" name="departure_time"  autocomplete="off" value="">
+          <input type="time" name="departure_time"  autocomplete="off" formControlName="dropOffTime">
           <span class="input-block__placeholder">
             Drop-off Time
           </span>
@@ -38,7 +39,7 @@
       </div>
       <div class="form-line time-picker">
         <div class="input-block input-block_animated ">
-          <textarea matInput placeholder="Comments"></textarea>
+          <textarea matInput placeholder="Comments" formControlName="dropOffComment"></textarea>
         </div>
       </div>
     </div>
@@ -52,10 +53,11 @@
         </button>
       </div>
       <div class="column text-right">
-        <button id="HCIBtnNextStep1" type="button" class="btn btn-shadow primary" (click)="next()">
+        <button id="HCIBtnNextStep1" type="submit" class="btn btn-shadow primary" >
           Next
         </button>
       </div>
     </div>
   </div>
 </div>
+</form>

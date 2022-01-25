@@ -1,3 +1,4 @@
+<form [formGroup]="flightDetailsForm" (ngSubmit)="onSubmit()">
 <div class="big_title" id="section1">
   You are only few steps away from baggage freedom
 </div>
@@ -13,7 +14,7 @@
     <div class="main-form__row">
       <div class="form-line">
         <div class="input-block  input-block_animated">
-          <input type="text" name="departure_airport" autocomplete="off" value="">
+          <input type="text" name="departure_airport" autocomplete="off" formControlName="destination">
           <span class="input-block__placeholder">
             Flying to
           </span>
@@ -23,7 +24,7 @@
         <div class="react-datepicker-wrapper">
           <div class="react-datepicker__input-container">
             <div class="input-block input-block_animated">
-              <input type="date" name="departure_date" autocomplete="off"  value="" style="width:21rem" >
+              <input type="date" name="departure_date" autocomplete="off"  style="width:21rem" formControlName="dateFlight">
               <span class="input-block__placeholder ">
                 What date are you flying out?
               </span>
@@ -33,7 +34,7 @@
       </div>
       <div class="form-line time-picker">
         <div class="input-block input-block_animated ">
-          <input type="time" name="departure_time"  autocomplete="off" value="">
+          <input type="time" name="departure_time"  autocomplete="off" formControlName="timeFlight">
           <span class="input-block__placeholder">
             What time is your flight?
           </span>
@@ -44,107 +45,31 @@
           With which airline?
         </div>
         <div class="airlines-chooser-wrapper">
-          <div class="radio-group radio-group--flights radio-group--blue" >
-            <!--******************Airline 1*******************************-->
+          <div class="radio-group radio-group--flights radio-group--blue">
+            <!--******************Airline *******************************-->
+            <div *ngFor="let air of airlines; index as i; ">
             <div class="form-line form-line--radio form-line-12">
-              <input type="radio" id="flights-group_6" name="flights-group" value="tunisair" checked=""  style="position: relative; top: 20px ">
-              <label for="flights-group_6" class="label-radio label-radio--bg">
+              <input type="radio" id="flights-group_{{  i }}" name="airline" value="{{ air.nom }}"
+                style="position: relative; top: 20px " formControlName="airline">
+              <label for="flights-group_{{ i }}" class="label-radio label-radio--bg">
                 <span class="point-item point-item--square"></span>
                 <div class="image-wrapper">
-                  <img src="/assets/images/airways/Tunisair.png">
+                  <img src="/assets/images/airways/{{ air.photo }}">
                 </div>
                 <span>
-                  Tunisair
+                  {{ air.nom }}
                 </span>
               </label>
               <div class="text-block">
                 TRAVLUX will come to you and hand over your<span> Tunisair </span>boarding pass and baggage tags
               </div>
             </div>
-            <!--******************Airline 2*******************************-->
-            <div class="form-line form-line--radio form-line-12">
-              <input type="radio" id="flights-group_0" name="flights-group" value="saudia" style="position: relative; top: 20px ">
-              <label for="flights-group_0" class="label-radio label-radio--bg">
-                <span class="point-item point-item--square"></span>
-                <div class="image-wrapper">
-                  <img src="/assets/images/airways/saudia-airlines.png">
-                </div>
-                <span>
-                  SAUDIA
-                </span>
-              </label>
-              <div class="text-block">
-                TRAVLUX will come to you and hand over your<span> SAUDIA </span>boarding pass and baggage tags
-              </div>
-            </div>
-            <!--******************Airline 3*******************************-->
-            <div class="form-line form-line--radio form-line-12">
-              <input type="radio" id="flights-group_1" name="flights-group" value="flydubai" style="position: relative; top: 20px ">
-              <label for="flights-group_1" class="label-radio label-radio--bg">
-                <span class="point-item point-item--square"></span>
-                <div class="image-wrapper">
-                  <img src="/assets/images/airways/flydubai.png">
-                </div>
-                <span>
-                  flydubai
-                </span>
-              </label>
-              <div class="text-block">
-                TRAVLUX will come to you and hand over your<span> Flydubai </span>boarding pass and baggage tags
-              </div>
-            </div>
-            <!--******************Airline 4*******************************-->
-            <div class="form-line form-line--radio form-line-12">
-              <input type="radio" id="flights-group_2" name="flights-group" value="kuwait-airways" style="position: relative; top: 20px ">
-              <label for="flights-group_2" class="label-radio label-radio--bg"><span class="point-item point-item--square"></span>
-                <div class="image-wrapper">
-                  <img src="/assets/images/airways/kywaitairways.png">
-                </div>
-                <span>
-                  Kuwait Airways
-                </span>
-              </label>
-              <div class="text-block">
-                TRAVLUX will come to you and hand over your<span> Kuwait Airways </span>boarding pass and baggage tags
-              </div>
-            </div>
-            <!--******************Airline 5*******************************-->
-            <div class="form-line form-line--radio form-line-12">
-              <input type="radio" id="flights-group_3" name="flights-group" value="emirates-airlines-dubz" style="position: relative; top: 20px ">
-              <label for="flights-group_3" class="label-radio label-radio--bg">
-                <span class="point-item point-item--square"></span>
-                <div class="image-wrapper">
-                  <img src="/assets/images/airways/EK.png">
-                </div>
-                <span>
-                  Emirates
-                </span>
-              </label>
-              <div class="text-block">
-                <p>
-                  TRAVLUX will come to your address to collect your bags and load them onto your flight, as well as handover your baggage tags and boarding pass.
-                </p>
-              </div>
-            </div>
-            <!--******************Airline 6*******************************-->
-            <div class="form-line form-line--radio form-line-12">
-              <input type="radio" id="flights-group_4" name="flights-group" value="etihad-airline-dubz" style="position: relative; top: 20px ">
-              <label for="flights-group_4" class="label-radio label-radio--bg">
-                <span class="point-item point-item--square"></span>
-                <div class="image-wrapper">
-                  <img src="/assets/images/airways/etihad-airways.png">
-                </div>
-                <span>
-                  Etihad Airways
-                </span>
-              </label>
-              <div class="text-block">
-                TRAVLUX will come to you and hand over your<span> Etihad Airways </span>boarding pass and baggage tags
-              </div>
-            </div>
+          </div>
+
             <!--******************Other*******************************-->
             <div class="form-line form-line--radio form-line-12">
-              <input type="radio" id="flights-group_7" name="flights-group" value="custom" style="position: relative; top: 20px ">
+              <input type="radio" id="flights-group_7" name="airline" value="custom"
+                style="position: relative; top: 20px " formControlName="airline">
               <label for="flights-group_7" class="label-radio label-radio--bg">
                 <span class="point-item point-item--square"></span>
                 <span>Other</span>
@@ -152,7 +77,7 @@
               <div class="text-block">
                 TRAVLUX will come to you and hand over your<span> Other </span>boarding pass and baggage tags
               </div>
-              <input type="text" class="text-block" value="Airline">
+              <input type="text" class="text-block" value="Airline" formControlName="airline">
 
             </div>
             <!--*************************************************-->
@@ -169,10 +94,11 @@
         </button>
       </div>
       <div class="column text-right">
-        <button id="HCIBtnNextStep1" type="button" class="btn btn-shadow primary" (click)="next()">
+        <button id="HCIBtnNextStep1" type="submit" class="btn btn-shadow primary" >
           Next
         </button>
       </div>
     </div>
   </div>
 </div>
+</form>

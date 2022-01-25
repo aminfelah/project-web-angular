@@ -1,3 +1,4 @@
+<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
 <div class="main-form panel panel-default">
   <div class="main-form__section main-form__section--body">
     <h2 class="section-title section-title--tiny section-title--blue">
@@ -50,14 +51,14 @@
         <br>
         <div class="radio-group radio-group--payment radio-group--blue">
           <div class="form-line form-line--radio form-line-12">
-            <input type="radio" id="payment-group_0" name="payment-group" value="credit_card">
+            <input type="radio" id="payment-group_0" name="paymentMethod" value="credit_card" formControlName="paymentMethod">
             <label for="payment-group_0" class="label-radio label-radio--bg">
               <span class="point-item point-item--square"></span>
               <span>Credit Card</span>
             </label>
           </div>
           <div class="form-line form-line--radio form-line-12">
-            <input type="radio" id="payment-group_1" name="payment-group" value="cash" checked="">
+            <input type="radio" id="payment-group_1" name="paymentMethod" value="cash" checked="" formControlName="paymentMethod">
             <label for="payment-group_1" class="label-radio label-radio--bg">
               <span class="point-item point-item--square"></span>
               <span>Cash on Pick up</span>
@@ -108,10 +109,11 @@
         </button>
       </div>
       <div class="column text-right">
-        <button id="HCIBtnNextStep1" type="button" class="btn btn-shadow primary" >
+        <button id="HCIBtnNextStep1" type="submit" class="btn btn-shadow primary" >
           Submit
         </button>
       </div>
     </div>
   </div>
 </div>
+</form>

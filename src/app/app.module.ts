@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +27,18 @@ import { BoardUserComponent } from './components/board-user/board-user.component
 import { SanitizerUrlPipe } from './sanitizer-url.pipe';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { FlightTicketsService } from './services/flight-tickets.service';
+import { DepartureComponent } from './components/departure/departure.component';
+import { ArrivalComponent } from './components/arrival/arrival.component';
+import { ForfaitsComponent } from './components/departure/forfaits/forfaits.component';
+import { FlightDetailsComponent } from './components/departure/flight-details/flight-details.component';
+import { PickupDetailsComponent } from './components/departure/pickup-details/pickup-details.component';
+import { PaymentComponent } from './components/departure/payment/payment.component';
+import { ContactDetailsComponent } from './components/departure/contact-details/contact-details.component';
+import { ArrivalDetailsComponent } from './components/arrival/arrival-details/arrival-details.component';
+import { ContactComponent } from './components/arrival/contact/contact.component';
+import { DropoffDetailsComponent } from './components/arrival/dropoff-details/dropoff-details.component';
+import { PaymentDetailsComponent } from './components/arrival/payment-details/payment-details.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -55,6 +67,17 @@ import { FlightTicketsService } from './services/flight-tickets.service';
     BoardModeratorComponent,
     BoardUserComponent,
     SanitizerUrlPipe,
+    DepartureComponent,
+    ArrivalComponent,
+    ForfaitsComponent,
+    FlightDetailsComponent,
+    PickupDetailsComponent,
+    PaymentComponent,
+    ContactDetailsComponent,
+    ArrivalDetailsComponent,
+    ContactComponent,
+    DropoffDetailsComponent,
+    PaymentDetailsComponent
     
 
  
@@ -63,7 +86,9 @@ import { FlightTicketsService } from './services/flight-tickets.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    CommonModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

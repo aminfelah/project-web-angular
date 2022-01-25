@@ -1,0 +1,83 @@
+<form [formGroup]="arrivalDetailsForm" (ngSubmit)="onSubmit()">
+<div class="main-form panel panel-default">
+  <div class="main-form__section main-form__section--body">
+    <h2 class="section-title section-title--tiny section-title--blue">
+      <b>Arrival Details</b>
+      <br>
+    </h2>
+
+    <div class="form-line">
+      <div class="text-block box info-box">
+        <div class="box__content">
+          <p style="color: #3F1B4B; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif; margin-bottom: 1rem;">
+            Arrive at the Airport and proceed straight to your home or hotel and let us take care of your bags!
+          </p>
+          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif; margin-bottom: 1rem;">
+            We will collect your baggage, clear it through customs and deliver it to wherever you are in Tunisia!
+          </p>
+          <p style="color: #3F1B4B; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif; margin-bottom: 1rem;">
+            We'll also sanitize your baggage before handover to you.
+          </p>
+        </div>
+        <div class="box__icon">
+          <span class="svg-icon">
+            <svg class="svg-icon" viewBox="0 0 10 24" width="100%" height="100%">
+              <path d="M9.17402 4.77668C9.72555 4.23442 10 3.57493 10 2.80273C10 2.03225 9.72596 1.37147 9.17402 0.82232C8.62391 0.27468 7.96081 0 7.18554 0C6.40784 0 5.7421 0.274035 5.18672 0.82232C4.63133 1.37147 4.35303 2.03203 4.35303 2.80273C4.35303 3.57493 4.63133 4.23421 5.18672 4.77668C5.74312 5.32088 6.40763 5.5932 7.18554 5.5932C7.96101 5.5932 8.62391 5.32088 9.17402 4.77668ZM9.38437 22.7808L9.7006 21.41C9.53691 21.4915 9.27301 21.5847 8.91113 21.6907C8.54825 21.7967 8.22167 21.8507 7.93464 21.8507C7.32327 21.8507 6.89284 21.7445 6.64293 21.5309C6.39486 21.3173 6.27112 20.9155 6.27112 20.327C6.27112 20.0938 6.30844 19.7462 6.38654 19.2913C6.4622 18.8333 6.54922 18.4264 6.64598 18.0704L7.82653 13.6383C7.94215 13.2315 8.02146 12.7844 8.06406 12.2963C8.10767 11.8093 8.12795 11.4686 8.12795 11.2752C8.12795 10.3406 7.81902 9.58219 7.20096 8.99712C6.58289 8.41249 5.70275 8.12017 4.56216 8.12017C3.92746 8.12017 3.25646 8.23976 2.5463 8.47874C1.83614 8.71706 1.09373 9.00422 0.317045 9.33956L0 10.7115C0.231445 10.6207 0.50711 10.523 0.829631 10.4219C1.15073 10.3213 1.46575 10.2692 1.77225 10.2692C2.39802 10.2692 2.81953 10.3824 3.04043 10.6052C3.26132 10.8287 3.37228 11.2262 3.37228 11.7945C3.37228 12.1087 3.33719 12.4578 3.26437 12.8373C3.19256 13.2191 3.1029 13.6228 2.99742 14.0489L1.8118 18.4989C1.70632 18.9665 1.62924 19.3849 1.58076 19.7563C1.53269 20.1274 1.50956 20.4915 1.50956 20.8456C1.50956 21.7602 1.82823 22.5141 2.46536 23.1091C3.1025 23.7017 3.99582 24 5.14432 24C5.89221 24 6.54861 23.8963 7.11353 23.6879C7.67784 23.4801 8.43567 23.1779 9.38437 22.7808Z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="main-form__row">
+      <div class="form-line">
+        <div class="input-block  input-block_animated">
+          <input type="text" name="departure_airport" autocomplete="off" formControlName="airline">
+          <span class="input-block__placeholder">
+            Airline
+          </span>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="react-datepicker-wrapper">
+          <div class="react-datepicker__input-container">
+            <div class="input-block input-block_animated">
+              <input type="date" name="departure_date" autocomplete="off" style="width:21rem" formControlName="arrivalDate">
+              <span class="input-block__placeholder ">
+                Arrival Date
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-line time-picker">
+        <div class="input-block input-block_animated ">
+          <input type="time" name="departure_time"  autocomplete="off" formControlName="arrivalTime">
+          <span class="input-block__placeholder">
+            Arrival Time
+          </span>
+        </div>
+      </div>
+      <div class="form-line__helper">
+        To help us serve you better, we would appreciate if you mention: flight number, flight booking reservation number(s), number of passengers, specific address location, and any special baggage types
+      </div>
+      <div class="form-line time-picker">
+        <div class="input-block input-block_animated ">
+          <textarea matInput placeholder="Comments" formControlName="comment"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-form__section main-form__section--footer">
+    <div class="main-form__row">
+      <div class="column text-right">
+        <button id="HCIBtnNextStep1" type="submit" class="btn btn-shadow primary" >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

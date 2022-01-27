@@ -1,0 +1,83 @@
+.contact-details{
+    padding: 2% 5%;
+    width: 70%;
+    border-radius: 2px;
+    box-shadow: -5px 5px 50px #707070;
+    margin: 10% 15%;
+    margin-top: 5%;
+    background-color: white;
+}
+
+.contact-details-title{
+    font-family: 'Poppins';
+    color: #3F1B4B;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    padding: 5%;
+}
+
+.contact-details-form-item{
+    padding: 2% 4%;
+}
+
+.contact-details-form-item-label{
+    font-family: 'Poppins';
+    color: #3F1B4B;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.contact-details-form-item-input{
+    font-family: 'Poppins';
+    background-color: #EEEEEE;
+    border: none;
+    font-size: 16px;
+    margin-top: -10px;
+    height: 50px;
+}
+
+.next-btn{
+    background-color: #3F1B4B;
+    border-radius: 25px;
+    width: 60%;
+    margin: 0 20%;
+    margin-top: 10%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .contact-details{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .contact-details-form-item-label{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .contact-details-form-item-input{
+        font-size: 10px;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .contact-details{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .contact-details-form-item-label{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .contact-details-form-item-input{
+        font-size: 10px;
+    }  
+}

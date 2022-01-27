@@ -1,0 +1,43 @@
+<form class="pickup-form" name="pickup-form">
+    <div class="row">
+        <div class="col pickup-form-item">
+            <label for="pickup-location"><p class="pickup-form-item-label">Pick-up's location</p></label>
+            <input 
+                type="text" 
+                name="pickup-location" 
+                class="form-control pickup-form-item-input" 
+                placeholder="Pick-up's location" 
+                [(ngModel)]="pickup.pick_up_location"
+                required
+            >
+        </div>
+        <div class="col pickup-form-item">
+            <label for="pickup-date"><p class="pickup-form-item-label">Pick-up's Date</p></label>
+            <input 
+                type="date" 
+                name="pickup-date" 
+                class="form-control pickup-form-item-input" 
+                placeholder="Pick-up's date" 
+                [(ngModel)]="pickup.pick_up_date"
+                required
+            >
+        </div>
+        <div class="col pickup-form-item">
+            <label for="pickup-time"><p class="pickup-form-item-label">Pick-up's Time</p></label>
+            <input 
+
+                type="time" 
+                name="pickup-time" 
+                class="form-control pickup-form-item-input" 
+                placeholder="Pick-up's Time"
+                required
+            >
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-dark send-btn" (click)="sendPickup()" [disabled]="isSendDisabled || pickup.pick_up_date == null || pickup.pick_up_location == ''">
+                Start
+                <i class="fa fa-paper-plane send-icon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+  </form>

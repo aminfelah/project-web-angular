@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+.pickup-form{
+    padding: 2% 5%;
+    width: 70%;
+    border-radius: 2px;
+    box-shadow: -5px 5px 50px #707070;
+    margin-left: 15%;
+    margin-top: -5%;
+    background-color: white;
+}
+
+.pickup-form-item{
+    padding: 1% 1%;
+}
+
+.pickup-form-item-label{
+    font-family: 'Poppins';
+    color: #3F1B4B;
+    padding-left: 10px;
+}
+
+.pickup-form-item-input{
+    font-family: 'Poppins';
+    background-color: #EEEEEE;
+    border: none;
+    font-size: small;
+}
+
+.send-btn{
+    background-color: #3F1B4B;
+    border-radius: 25px;
+    width: 100%;
+    margin: 10% 10%;
+}
+
+.send-icon{
+    padding-left: 5%;
+}
+
+@media screen and (max-width: 900px) {
+    .pickup-form{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .pickup-form-item-label{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .pickup-form-item-input{
+        font-size: 10px;
+    }
+    
+    .send-btn{
+        margin: 10% 10%;
+    }
+    
+    .send-icon{
+        padding-left: 5%;
+    }   
+}
+
+@media screen and (max-width: 600px) {
+    .pickup-form{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .pickup-form-item-label{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .pickup-form-item-input{
+        font-size: 10px;
+    }
+    
+    .send-btn{
+        margin: 20% 10%;
+    }
+    
+    .send-icon{
+        padding-left: 5%;
+    }   
+}

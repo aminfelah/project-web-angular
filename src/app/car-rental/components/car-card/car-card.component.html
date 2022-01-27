@@ -1,0 +1,31 @@
+<div class="card p-2 car-card">
+    <div class="p-info px-3 py-3">
+        <div>
+            <h5 class="mb-0">{{car.brand}}</h5> <span>{{car.model}} {{car.year}}</span>
+        </div>
+        <div class="p-price d-flex flex-row"> <span>$</span>
+            <h1>{{car.price_per_day}}</h1>
+        </div>
+        <div class="heart"> <i class="bx bx-heart"></i> </div>
+    </div>
+    <div class="text-center p-image"> <img src={{car.picture}}> </div>
+    <div class="p-about">
+            <p class="car-detail"><strong>Year: </strong>{{car.year}}</p>
+            <p class="car-detail"><strong>Class: </strong>{{car.car_class}}</p>
+            <p class="car-detail"><strong>Passenger nombre: </strong>{{car.nbrPassengers}}</p>
+            <p class="car-detail" *ngIf="car.hasAC"><strong>Has air conditioner</strong></p>
+            <p class="car-detail" *ngIf="!car.hasAC"><strong>Does not have air conditioner</strong></p>
+            <p class="car-detail"><strong>Type: </strong>{{car.car_type}}</p>
+            <p class="car-detail"><strong>Fuel Policy: </strong>{{car.fuel_policy}}</p>
+            <p class="car-detail"><strong>Transmission: </strong>{{car.transmission}}</p>
+            <p class="car-detail"><strong>Color: </strong>{{car.color}}</p>
+    </div>
+    <div class="buttons d-flex flex-row gap-3 px-3">
+        <button 
+            class="btn btn-outline-secondary w-100"
+            (click)="reserve(car.id)"
+            [disabled]="isReserved"
+        >Reservation</button>
+    </div>
+    <i *ngIf="isReserved" class="fa fa-check tick-reserved" aria-hidden="true"></i>
+</div>

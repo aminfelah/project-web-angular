@@ -1,0 +1,9 @@
+<app-head></app-head>
+<app-car-rental-pickup-form (isSendDisabledEmitter)="isSendDisabledInput($event)"></app-car-rental-pickup-form>
+
+<div class="page" [hidden]="!isSendDisabled">
+    <router-outlet></router-outlet>
+    <!-- <app-reservation-success></app-reservation-success> -->
+</div>
+
+<app-shared-footer></app-shared-footer>

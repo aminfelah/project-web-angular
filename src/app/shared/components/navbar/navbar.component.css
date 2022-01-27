@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+.navbar-item{
+    font-family: "Heebo";
+    font-size: 14px;
+    align-self:center;
+    font-weight: bolder;
+    padding: 10px;
+    color: black;
+}
+
+.navbar-item-active{
+    border-bottom: solid 2px black;
+}
+
+.shared-navbar{
+    padding: 5px 50px;
+}
+
+@media screen and (max-width: 993px) {
+    .shared-navbar{
+        background-color: rgb(255, 255, 255, 0.8);
+    }
+}

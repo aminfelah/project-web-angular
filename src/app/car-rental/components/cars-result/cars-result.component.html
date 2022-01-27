@@ -1,0 +1,91 @@
+<div class="car-results">
+    <div class="filters">
+        <!-- ----------------------------------------- Brand ----------------------------------------- -->
+        <h5 class="display-4 title" data-toggle="collapse" data-target="#brands">Brands <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </h5>
+        <form id="brands" class="collapse">
+            <div class="form-check" *ngFor="let brandItem of brands">
+                <input class="form-check-input radio" type="radio" name="brand" id="{{brandItem}}" (click)="setBrand(brandItem)">
+                <label class="form-check-label label" for="{{brandItem}}">{{brandItem}}</label>
+            </div>
+            <button class="btn btn-dark submit-btn" (click)="getCarsByBrand()">Submit</button>
+        </form>
+        <!-- ----------------------------------------- Year ----------------------------------------- -->
+        <h5 class="display-4 title" data-toggle="collapse" data-target="#years">Years <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </h5>
+        <form id="years" class="collapse">
+            <div class="form-check" *ngFor="let yearItem of years">
+                <input class="form-check-input radio" type="radio" name="brand" id="{{yearItem}}" (click)="setYear(yearItem)">
+                <label class="form-check-label label" for="{{yearItem}}">{{yearItem}}</label>
+            </div>
+            <button class="btn btn-dark submit-btn" (click)="getCarsByYear()">Submit</button>
+        </form>
+        <!-- ----------------------------------------- Car Class ----------------------------------------- -->
+        <h5 class="display-4 title" data-toggle="collapse" data-target="#car_classes">Car Classes <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </h5>
+        <form id="car_classes" class="collapse">
+            <div class="form-check" *ngFor="let carClassItem of car_classes">
+                <input class="form-check-input radio" type="radio" name="car_classes" id="{{carClassItem}}" (click)="setCarClass(carClassItem)">
+                <label class="form-check-label label" for="{{carClassItem}}">{{carClassItem}}</label>
+            </div>
+            <button class="btn btn-dark submit-btn" (click)="getCarsByCarClass()">Submit</button>
+        </form>
+        <!-- ----------------------------------------- Car Type ----------------------------------------- -->
+        <h5 class="display-4 title" data-toggle="collapse" data-target="#car_types">Car Types <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </h5>
+        <form id="car_types" class="collapse">
+            <div class="form-check" *ngFor="let carTypeItem of car_types">
+                <input class="form-check-input radio" type="radio" name="car_classes" id="{{carTypeItem}}" (click)="setCarType(carTypeItem)">
+                <label class="form-check-label label" for="{{carTypeItem}}">{{carTypeItem}}</label>
+            </div>
+            <button class="btn btn-dark submit-btn" (click)="getCarsByCarType()">Submit</button>
+        </form>
+        <!-- ----------------------------------------- AC ----------------------------------------- -->
+        <h5 class="display-4 title" data-toggle="collapse" data-target="#ac">Has AC <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </h5>
+        <form id="ac" class="collapse">
+            <div class="form-check">
+                <input class="form-check-input radio" type="radio" name="ac" id="1" (click)="setAC('1')">
+                <label class="form-check-label label" for="1">Yes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input radio" type="radio" name="ac" id="0" (click)="setAC('0')">
+                <label class="form-check-label label" for="0">No</label>
+            </div>
+            <button class="btn btn-dark submit-btn" (click)="getCarsByAC()">Submit</button>
+        </form>
+        <!-- ----------------------------------------- FUEL POLICY  ----------------------------------------- -->
+        <h5 class="display-4 title" data-toggle="collapse" data-target="#fuel_policies">Fuel Policy <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </h5>
+        <form id="fuel_policies" class="collapse">
+            <div class="form-check" *ngFor="let fuelPolicyItem of fuel_policies">
+                <input class="form-check-input radio" type="radio" name="car_classes" id="{{fuelPolicyItem}}" (click)="setFuelPolicy(fuelPolicyItem)">
+                <label class="form-check-label label" for="{{fuelPolicyItem}}">{{fuelPolicyItem}}</label>
+            </div>
+            <button class="btn btn-dark submit-btn" (click)="getCarsByFuelPolicy()">Submit</button>
+        </form>
+        <!-- ----------------------------------------- FUEL POLICY  ----------------------------------------- -->
+        <h5 class="display-4 title" data-toggle="collapse" data-target="#colors">Colors <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </h5>
+        <form id="colors" class="collapse">
+            <div class="form-check" *ngFor="let colorItem of colors">
+                <input class="form-check-input radio" type="radio" name="car_classes" id="{{colorItem}}" (click)="setColor(colorItem)">
+                <label class="form-check-label label" for="{{colorItem}}">{{colorItem}}</label>
+            </div>
+            <button class="btn btn-dark submit-btn" (click)="getCarsByColor()">Submit</button>
+        </form>
+        
+        
+        
+        
+  
+    
+    </div>
+    <div class="results">
+        <div  *ngFor="let car of cars" >
+            <div (click)="sendCadId(car.id)">
+                <app-car-card [car]="car"></app-car-card>
+            </div>
+        </div>
+    </div>
+</div>

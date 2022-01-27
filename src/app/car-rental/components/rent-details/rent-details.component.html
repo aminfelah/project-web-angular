@@ -1,0 +1,16 @@
+<div class="rent-details">
+    <p class="rent-details-title">Rent's Details</p>
+    <form>
+        <div class="details-form-item">
+            <label for="nbrDays"><p class="details-form-item-label">Number Of Days</p></label>
+            <input type="number" name="nbrDays" class="form-control details-form-item-input" placeholder="number of days" [(ngModel)]="nbrDays" required>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-dark next-btn" routerLink="/rent/contact" (click)="sendNbrDays()" [disabled]="nbrDays == 0">
+                NEXT &nbsp;&nbsp;
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </form>
+      <img src="/assets/images/cars.png" alt="cars" class="center">
+</div>

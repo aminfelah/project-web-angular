@@ -1,0 +1,34 @@
+<div class="contact-details">
+    <p class="contact-details-title">Contact's Details</p>
+    <form>
+        <div class="contact-details-form-item">
+            <label for="firstname"><p class="contact-details-form-item-label">First Name</p></label>
+            <input type="text" name="firstname" class="form-control contact-details-form-item-input" placeholder="firstname" [(ngModel)]="contact.firstName">
+        </div>
+        <div class="contact-details-form-item">
+            <label for="lastname"><p class="contact-details-form-item-label">Last Name</p></label>
+            <input type="text" name="lastname" class="form-control contact-details-form-item-input" placeholder="lastname"  [(ngModel)]="contact.lastName">
+        </div>
+        <div class="contact-details-form-item">
+            <label for="email"><p class="contact-details-form-item-label">Email</p></label>
+            <input type="email" name="email" class="form-control contact-details-form-item-input" placeholder="email"  [(ngModel)]="contact.email">
+        </div>
+        <div class="contact-details-form-item">
+            <label for="tel"><p class="contact-details-form-item-label">Phone Number</p></label>
+            <input id="phone" type="tel" name="tel" class="form-control contact-details-form-item-input" placeholder="tel"  [(ngModel)]="contact.tel">
+        </div>
+        <div class="col">
+            <button 
+                type="submit" 
+                class="btn btn-dark next-btn" 
+                routerLink="/rent/payment" 
+                (click)="sendContact()"
+                [disabled]="contact.firstName == '' || contact.lastName == '' || contact.email== '' || contact.tel == 0"
+            >
+                NEXT &nbsp;&nbsp;
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+      </form>
+      <img src="/assets/images/cars.png" alt="cars" class="center">
+</div>

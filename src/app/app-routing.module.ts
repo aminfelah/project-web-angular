@@ -8,6 +8,13 @@ import { PaymentDetailsComponent } from './components/arrival/payment-details/pa
 import { BoardAdminComponent } from './components/board-admin/board-admin.component';
 import { BoardModeratorComponent } from './components/board-moderator/board-moderator.component';
 import { BoardUserComponent } from './components/board-user/board-user.component';
+import { CarContactDetailsComponent } from './components/car-rental/car-contact-details/car-contact-details.component';
+import { CarRentalPageComponent } from './components/car-rental/car-rental-page/car-rental-page.component';
+
+import { CarsResultComponent } from './components/car-rental/cars-result/cars-result.component';
+import { PaymentMethodsComponent } from './components/car-rental/payment-methods/payment-methods.component';
+import { RentDetailsComponent } from './components/car-rental/rent-details/rent-details.component';
+import { ReservationSuccessComponent } from './components/car-rental/reservation-success/reservation-success.component';
 import { ContactDetailsComponent } from './components/departure/contact-details/contact-details.component';
 import { DepartureComponent } from './components/departure/departure.component';
 import { FlightDetailsComponent } from './components/departure/flight-details/flight-details.component';
@@ -15,39 +22,62 @@ import { ForfaitsComponent } from './components/departure/forfaits/forfaits.comp
 import { PaymentComponent } from './components/departure/payment/payment.component';
 import { PickupDetailsComponent } from './components/departure/pickup-details/pickup-details.component';
 import { FlightComponent } from './components/flight/flight.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomePageComponent } from './components/home/home-page/home-page.component';
+
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
-  { path: 'home', component: FlightComponent },
+  { path: 'home', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
+  { path: 'flight', component: FlightComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'departure', component: DepartureComponent, children:[
-    { path: '', redirectTo:'/departure/forfait', pathMatch:'full' },
-    { path: 'forfait', component: ForfaitsComponent },
-    { path: 'flight', component: FlightDetailsComponent },
-    { path: 'pickup', component: PickupDetailsComponent },
-    { path: 'contact', component: ContactDetailsComponent },
-    { path: 'payment', component: PaymentComponent }
-  ]},
-  { path: 'arrival', component: ArrivalComponent, children:[
-    { path: '', redirectTo:'/arrival/details', pathMatch:'full' },
-    { path: 'details', component: ArrivalDetailsComponent },
-    { path: 'dropoff', component: DropoffDetailsComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'payment', component: PaymentDetailsComponent }
-  ]}
+  {
+    path: 'departure',
+    component: DepartureComponent,
+    children: [
+      { path: '', redirectTo: '/departure/forfait', pathMatch: 'full' },
+      { path: 'forfait', component: ForfaitsComponent },
+      { path: 'flight', component: FlightDetailsComponent },
+      { path: 'pickup', component: PickupDetailsComponent },
+      { path: 'contact', component: ContactDetailsComponent },
+      { path: 'payment', component: PaymentComponent },
+    ],
+  },
+  {
+    path: 'arrival',
+    component: ArrivalComponent,
+    children: [
+      { path: '', redirectTo: '/arrival/details', pathMatch: 'full' },
+      { path: 'details', component: ArrivalDetailsComponent },
+      { path: 'dropoff', component: DropoffDetailsComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'payment', component: PaymentDetailsComponent },
+    ],
+  },
+  {
+    path: 'rent',
+    component: CarRentalPageComponent,
+    children: [
+      { path: '', redirectTo: '/rent/details', pathMatch: 'full' },
+      // { path: 'pickup', component: CarRentalPickupFormComponent },
+      { path: 'details', component: RentDetailsComponent },
+      { path: 'contact', component: CarContactDetailsComponent },
+      { path: 'payment', component: PaymentMethodsComponent },
+      { path: 'result', component: CarsResultComponent },
+      { path: 'success', component: ReservationSuccessComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

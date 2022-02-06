@@ -52,7 +52,8 @@
               "src/assets/js/jquery.min.js",
               "src/assets/js/jquery.sticky.js",
               "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/waypoints.min.js"
+              "src/assets/js/waypoints.min.js",
+              "node_modules/popper.js/dist/umd/popper.js"
             ]
           },
           "configurations": {

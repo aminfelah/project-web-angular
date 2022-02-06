@@ -1,0 +1,58 @@
+.background-image-home{
+
+    background-image: url("/assets/images/airlines/home-background.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    height: 800px;
+}
+
+.home-subtitle{
+    padding-top: 14%;
+    
+    font-size: 64px;
+    text-align:center;
+    color: white;
+}
+
+.home-title{
+   
+    font-size: 100px;
+    text-align:center;
+    color: white;
+    font-weight: 100;
+}
+
+.start-now-btn{
+    background-color: #D31F49;
+    border: #D31F49;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+    width: 20%;
+    box-shadow: #A20000 -2px 2px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .home-subtitle{
+        font-size: 30px;
+    }
+    .home-title{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .home-subtitle{
+        font-size: 20px;
+    }
+    .home-title{
+        font-size: 50px;
+    }
+}
+.banner-margin-top{
+    margin-top: 150px;
+}

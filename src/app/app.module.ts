@@ -19,7 +19,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { ProfileComponent } from './components/profile/profile.component';
 import { BoardAdminComponent } from './components/board-admin/board-admin.component';
 import { BoardModeratorComponent } from './components/board-moderator/board-moderator.component';
@@ -39,6 +39,26 @@ import { ContactComponent } from './components/arrival/contact/contact.component
 import { DropoffDetailsComponent } from './components/arrival/dropoff-details/dropoff-details.component';
 import { PaymentDetailsComponent } from './components/arrival/payment-details/payment-details.component';
 import { CommonModule } from '@angular/common';
+import { HeadSharedComponent } from './components/shared/head-shared/head-shared.component';
+import { NavbarSharedComponent } from './components/shared/navbar-shared/navbar-shared.component';
+import { FooterSharedComponent } from './components/shared/footer-shared/footer-shared.component';
+import { HomeAboutComponent } from './components/home/home-about/home-about.component';
+import { HomeGettingStartedComponent } from './components/home/home-getting-started/home-getting-started.component';
+import { HomeFooterComponent } from './components/home/home-footer/home-footer.component';
+import { HomeNavbarComponent } from './components/home/home-navbar/home-navbar.component';
+import { HomeServicesComponent } from './components/home/home-services/home-services.component';
+import { HomePageComponent } from './components/home/home-page/home-page.component';
+import { HomeReviewsComponent } from './components/home/home-reviews/home-reviews.component';
+import { CarRentalPageComponent } from './components/car-rental/car-rental-page/car-rental-page.component';
+import { CarRentalPickupFormComponent } from './components/car-rental/car-rental-pickup-form/car-rental-pickup-form.component';
+import { CarCardComponent } from './components/car-rental/car-card/car-card.component';
+import { CarsResultComponent } from './components/car-rental/cars-result/cars-result.component';
+import { RentDetailsComponent } from './components/car-rental/rent-details/rent-details.component';
+import { PaymentMethodsComponent } from './components/car-rental/payment-methods/payment-methods.component';
+import { ReservationSuccessComponent } from './components/car-rental/reservation-success/reservation-success.component';
+import { CarContactDetailsComponent } from './components/car-rental/car-contact-details/car-contact-details.component';
+
+
 
 
 
@@ -61,7 +81,7 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent,
+  
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
@@ -77,7 +97,26 @@ import { CommonModule } from '@angular/common';
     ArrivalDetailsComponent,
     ContactComponent,
     DropoffDetailsComponent,
-    PaymentDetailsComponent
+    PaymentDetailsComponent,
+    HeadSharedComponent,
+    NavbarSharedComponent,
+    FooterSharedComponent,
+    HomeAboutComponent,
+    HomeGettingStartedComponent,
+    HomeFooterComponent,
+    HomeNavbarComponent,
+    HomeServicesComponent,
+    HomePageComponent,
+    HomeReviewsComponent,
+    CarRentalPageComponent,
+    CarRentalPickupFormComponent,
+    CarsResultComponent,
+    CarCardComponent,
+    RentDetailsComponent,
+    CarContactDetailsComponent,
+    PaymentMethodsComponent,
+    ReservationSuccessComponent
+    
     
 
  

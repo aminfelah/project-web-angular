@@ -1,0 +1,58 @@
+.payment-methods{
+    padding: 2% 5%;
+    width: 70%;
+    border-radius: 2px;
+    box-shadow: -5px 5px 50px #707070;
+    margin: 10% 15%;
+    margin-top: 5%;
+    background-color: white;
+}
+.payment-methods-title{
+    font-family: 'Poppins';
+    color: #3F1B4B;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    padding: 5%;
+}
+
+.next-btn{
+    background-color: #3F1B4B;
+    border-radius: 25px;
+    width: 60%;
+    margin: 0 20%;
+    margin-top: 10%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 5%;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 5%;
+}
+
+@media screen and (max-width: 900px) {
+    .payment-methods{
+        width: 80%;
+        margin-left: 10%;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .payment-methods{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+.color-text-button{
+    color:#FFFFFF
+}

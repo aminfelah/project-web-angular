@@ -117,8 +117,10 @@ html,body{
     
 }
 .navbar-background {
-    background-color: #565a5c;
-    
+    background-color: #D31F49 !important;
+}
+.navbar-background-2 {
+    background-color:#843561 !important;
 }
 
 .wrapper {
@@ -167,7 +169,7 @@ html,body{
     padding: 10px 0 0 0;
 }
 .logo a span{
-    color: #00d8ff;
+    color: #843561;
     text-transform: capitalize;
 }
 
@@ -203,7 +205,7 @@ html,body{
 .main-menu  .nav  li.active a,
 .main-menu  .nav  li a:hover,
 .main-menu .nav  li a:focus{
-    color: #00d8ff;
+    color: #7c7c7c;
     background-color:transparent;
 }
 .main-menu .nav a:before{
@@ -223,7 +225,7 @@ html,body{
 }
 .main-menu .nav li.active  a:before,
 .main-menu .nav a:hover:before{
-    background: #00d8ff;
+   
     width: 100%;
 }
 
@@ -237,7 +239,7 @@ html,body{
     float:left;
 }
 .main-menu .navbar-toggle {
-    color: #00d8ff;
+    color: #843561;
 }
 .main-menu .navbar-default .navbar-toggle:focus, 
 .main-menu .navbar-default .navbar-toggle:hover {
@@ -251,8 +253,9 @@ html,body{
 
 /*book-btn*/
 .book-btn {
-	background: #00d8ff;
-    border: 1px solid #00d8ff;
+    
+	background: #84356100;
+    border: 1px solid #ffffff;
     width: 120px;
     height: 40px;
     white-space: nowrap;
@@ -267,11 +270,12 @@ html,body{
     -ms-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+
 }
 .book-btn:hover{
-    color: #fff;
-    background: #00d8d5;
-    border: 1px solid #00d8d5;
+    color: #843561  ;
+    background: #818181;
+    border: 1px solid #843561;
 }/*book-btn*/
 
 /*-------------------------------------
@@ -294,7 +298,7 @@ html,body{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,122,207,.4);
+	background: rgba(126, 46, 231, 0.342);
 }
 
 /*about-us-content*/
@@ -310,7 +314,7 @@ html,body{
 	line-height: 1.22;
 }
 .about-us h2 span{
-	color:#2bdab5;
+	color:#843561;
 	margin-top: -11px;
 }
 .about-btn {
@@ -326,8 +330,8 @@ html,body{
 	display: flex;
     justify-content: center;
     align-items: center;
-    background: #00d8ff;
-    border: 1px solid #00d8ff;
+    background: #843561;
+    border: 1px solid #843561;
     width: 200px;
     height: 60px;
     white-space: nowrap;
@@ -345,9 +349,9 @@ html,body{
 }
 .about-btn:hover .about-view{
     color: #fff;
-    background: #00d8d5;
+    background: #843561;
     box-shadow: 0 5px 20px rgba(14,15,18,.7);
-	border: 1px solid #00d8d5;
+	border: 1px solid #843561;
 }
 .travel-mrt-0{
     margin-top: 0px;
@@ -376,7 +380,7 @@ html,body{
 
 .desc-tabs .nav-tabs>li.active>a{
 	color: #fff;
-    background: #00d8ff;
+    background: #843561;
     cursor: default;
     font-size: 20px;
     font-weight: 500;
@@ -390,12 +394,12 @@ html,body{
 }
 .desc-tabs .nav-tabs>li.active>a:focus, 
 .desc-tabs .nav-tabs>li.active>a:hover {
-    color: #565a5c;
+    color: #843561;
     text-decoration: none;
 }
 .desc-tabs .nav-tabs>li>a{
 	color: #fff;
-    background: #00d8ff;
+    background: #843561;
     cursor: default;
     font-size: 20px;
     font-weight: 500;
@@ -411,7 +415,7 @@ html,body{
 }
 .single-travel-boxes .nav>li>a:focus, 
 .single-travel-boxes .nav>li>a:hover {
-	color: #565a5c;
+	color: #843561;
 	background: #fff;
 	border: 0;
     text-decoration: none;
@@ -546,7 +550,7 @@ html,body{
 }
 
 .single-trip-circle input[type="radio"]:checked + label span.round-boarder1{
-     background-color:#00d8ff;
+     background-color:#843561;
 }
 
 .single-trip-circle input[type="radio"] + label span.round-boarder1,
@@ -766,7 +770,8 @@ html,body{
 }
 .filtr-container .filtr-item:hover .item-title a,
 .filtr-container .filtr-item:hover .item-title p{
-    color:#2cdbb5;
+    color:#843561
+    ;
 }
 /*.item-title*/
 
@@ -1005,7 +1010,7 @@ html,body{
 }
 .home1-testm-txt h3 a{
     display: block;
-    color: #00d8ff;
+    color: #843561;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -1041,7 +1046,7 @@ html,body{
     left:0;
     width: 100%;
     height: 100%;
-    background: rgba(0,216,255,.6);
+    background: rgba(126, 46, 231, 0.342);
     z-index: -1;
 }
 
@@ -1102,7 +1107,7 @@ html,body{
     padding: 172px 0 0;
 }
 .single-special-offer h2{
-    color: #74eaff;
+    color: #843561;
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -1324,7 +1329,7 @@ html,body{
 
 /*appsLand-btn*/
 .appsLand-btn {
-    background: #00d8ff;
+    background: #843561;
     display: inline-block;
     padding: 17px 54px;
     text-decoration: none;
@@ -1403,7 +1408,7 @@ html,body{
     padding: 10px 0 0 0;
 }
 .footer-logo a>span {
-    color: #00d8ff;
+    color: #843561;
     text-transform: capitalize;
 } 
 .footer-logo p{
@@ -1434,7 +1439,7 @@ html,body{
     -ms-transition:scaleX(1.2);
     -o-transition:scaleX(1.2);
     transform:scaleX(1.2);
-    color: #00d8ff;
+    color: #843561;
 }/*single-footer-txt*/
 
 .footer-copyright hr{
@@ -1482,7 +1487,7 @@ html,body{
 
 .foot-icons .footer-social-links a:hover {
     /*color: #00d8d5;*/
-    color: #2cdbb5;
+    color: #843561;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
@@ -1495,7 +1500,7 @@ html,body{
     margin-top:28px;
 }
 .foot-icons p a,.foot-icons p a:hover,.foot-icons p a:focus{
-    color:#00d8ff;
+    color:#843561;
     font-size:16px;
     margin-top:28px;
 }/*foot-icons*/
@@ -1517,8 +1522,8 @@ html,body{
     cursor: pointer;
     z-index:15;
     color: #fff;
-    background:#00d8ff;
-	border:1px solid #00d8ff;
+    background:#843561;
+	border:1px solid #843561;
 	border-radius:5px;
 	-webkit-transition: .5s; 
 	-moz-transition:.5s; 
@@ -1530,7 +1535,7 @@ html,body{
 }
 
 #scroll-Top  .return-to-top:hover {
-    background:#2cdbb5;
+    background:#843561;
     color: #fff;
 	border-radius:50%;
 

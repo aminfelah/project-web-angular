@@ -1,0 +1,30 @@
+<div class="home-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light inside-home-navbar">
+        <img src="/assets/images/airlines/logo-dark.png" class="logo-width logo-margin" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ul-margin" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink=""><p class="navbar-item" (click)="navbarClicked('home')" [ngClass]="{'navbar-item-active' : id == 'home'}">HOME</p></a>
+            </li>        
+            <li class="nav-item">
+                <a href="#about" class="nav-link" ><p class="navbar-item" (click)="navbarClicked('about')" [ngClass]="{'navbar-item-active' : id == 'about'}">ABOUT</p></a>
+            </li>
+            <li class="nav-item">
+                <a href="#reviews"class="nav-link" ><p class="navbar-item" (click)="navbarClicked('reviews')" [ngClass]="{'navbar-item-active' : id == 'reviews'}">REVIEWS</p></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#services"><p class="navbar-item" (click)="navbarClicked('services')" [ngClass]="{'navbar-item-active' : id == 'services'}">SERVICES</p></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+</div>
+<a href="#contact">
+<div class="btn btn-primary home-navbar-talk-to-us" >
+  <div class="square"></div>
+  <p class="talk-to-us-title button-color">TALK TO US</p>
+</div>
+</a>

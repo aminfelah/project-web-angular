@@ -35,10 +35,14 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     let element = document.querySelector('.header-area') as HTMLElement;
-    if (window.pageYOffset > element.clientHeight || location.pathname!="/home" ) {
-      this.backgroundpresent="navbar-background"
-    } else {
-      this.backgroundpresent=""
+    if (window.pageYOffset < element.clientHeight && location.pathname=="/flight") {
+      this.backgroundpresent="";
+     }
+     else if(location.pathname=="/home" ) {
+      this.backgroundpresent="navbar-background";
+    }else
+    {
+      this.backgroundpresent="navbar-background-2";
     }
   }
 

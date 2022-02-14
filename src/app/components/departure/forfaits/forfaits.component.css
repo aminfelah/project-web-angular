@@ -303,7 +303,7 @@ ol, ul {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   text-align: center;
-  height: 63rem;
+  height: 69rem;
 
 }
 /***************box shadox****************/
@@ -1030,4 +1030,7 @@ input:active, input:focus, input:hover {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   fill: currentColor;
+}
+.margin-top-forfait{
+  margin-top: 5%;
 }

@@ -25,10 +25,12 @@ import { FlightComponent } from './components/flight/flight.component';
 import { HomePageComponent } from './components/home/home-page/home-page.component';
 
 import { LoginComponent } from './components/login/login.component';
+import { PaymentFormComponent } from './components/payment-form/payment-form.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
+  { path: 'payment', component: PaymentFormComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
@@ -66,11 +68,11 @@ const routes: Routes = [
     component: CarRentalPageComponent,
     children: [
       { path: '', redirectTo: '/rent/details', pathMatch: 'full' },
-      // { path: 'pickup', component: CarRentalPickupFormComponent },
       { path: 'details', component: RentDetailsComponent },
       { path: 'contact', component: CarContactDetailsComponent },
       { path: 'payment', component: PaymentMethodsComponent },
       { path: 'result', component: CarsResultComponent },
+      { path: 'payment-card', component: PaymentFormComponent },
       { path: 'success', component: ReservationSuccessComponent },
     ],
   },

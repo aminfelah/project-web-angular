@@ -57,6 +57,7 @@ import { RentDetailsComponent } from './components/car-rental/rent-details/rent-
 import { PaymentMethodsComponent } from './components/car-rental/payment-methods/payment-methods.component';
 import { ReservationSuccessComponent } from './components/car-rental/reservation-success/reservation-success.component';
 import { CarContactDetailsComponent } from './components/car-rental/car-contact-details/car-contact-details.component';
+import { PaymentFormComponent } from './components/payment-form/payment-form.component';
 
 
 
@@ -115,7 +116,8 @@ import { CarContactDetailsComponent } from './components/car-rental/car-contact-
     RentDetailsComponent,
     CarContactDetailsComponent,
     PaymentMethodsComponent,
-    ReservationSuccessComponent
+    ReservationSuccessComponent,
+    PaymentFormComponent
     
     
 

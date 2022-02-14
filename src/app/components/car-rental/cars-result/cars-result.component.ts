@@ -214,7 +214,7 @@ export class CarsResultComponent implements OnInit {
   sendCadId(car_id: string){
     this.carRentalService.setCar_id(car_id);
     this.addReservation();
-    this.router.navigate(['/rent/success']);
+    this.router.navigate(['/rent/payment-card']);
   }
 
   addReservation(){

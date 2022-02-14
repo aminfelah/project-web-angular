@@ -1,278 +1,391 @@
 <div>
-<form [formGroup]="forfaitForm" (ngSubmit)="onSubmit()">
-<div class="forfaits">
- <ul class="prices-plans r-row r-row--mobile">
-<!--//////////////////////// Package1 /////////////////////////////////-->
-    <li class="r-column">
-      <div class="price-plan panel panel-default " [ngClass]="{'active': current[0]}">
-        <h4 class="price-plan__title color--primary">
-          <b>Home Check-in</b>
-          <span>(209 DT)</span>
-        </h4>
-        <span style="display: inline-block; margin-top: 0.5rem;">
-          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;" class="subtitle">
-            Travel hassle-free and baggage-free
-          </p>
-        </span>
-        <h5 class="price-plan__sub-title color--primary"></h5>
-        <div class="price-plan__wrapper">
-          <div class="price-plan__body">
-            <ul class="price-plan__info">
-              <li class="text-left">
-                Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
-                  checked-in
-                </span>
-                to your flight, with boarding pass and baggage tag handover at home.
-              </li>
-            </ul>
-            <div class="package-img">
-              <img src="/assets/images/forfaits/package1.png" alt="1 package">
-            </div>
-            <div class="price-plan__adds">
-              <div class="text-left text-bold">
-                Enjoy a preferential rate on PCR testing for DT 250 per individual
+  <form [formGroup]="forfaitForm" (ngSubmit)="onSubmit()">
+    <div class="forfaits">
+      <ul class="prices-plans r-row r-row--mobile">
+        <!--//////////////////////// Package1 /////////////////////////////////-->
+        <li class="r-column">
+          <div
+            class="price-plan panel panel-default"
+            [ngClass]="{ active: current[0] }"
+          >
+            <h4 class="price-plan__title color--primary">
+              <div class="margin-top-forfait">
+                <b>Home Check-in</b>
               </div>
-            </div>
-          </div>
-          <div class="price-plan__footer">
-            <div>Up to 4 bags</div>
-            <h4 class="price-plan__price color--primary text-center">
-              <b>209
-                <span class="text-up">DT</span>
-                <span class="text-small">(+5% VAT)</span>
-              </b>
+              <span>(209 DT)</span>
             </h4>
-            <button type="button" class="btn secondary" (click)="select(0)">
-              Select
-            </button>
-            <p class="availability">
-              Home Check-In is subject to airline choice and availability
-            </p>
-          </div>
-        </div>
-      </div>
-    </li>
-<!--//////////////////////// Package2 /////////////////////////////////-->
-<li class="r-column">
-      <div class="price-plan panel panel-default" [ngClass]="{'active': current[1]}">
-        <h4 class="price-plan__title color--primary">
-          <b>Home Check-in &amp; Sanitization</b>
-          <span>(249 DT)</span>
-        </h4>
-        <span style="display: inline-block; margin-top: 0.5rem;">
-          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;" class="subtitle">
-            Protect your bags
-          </p>
-        </span>
-        <div class="price-plan__wrapper">
-          <div class="price-plan__body">
-            <ul class="price-plan__info">
-              <li class="text-left">
-                Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
-                  checked-in
-                </span>
-                to your flight, with boarding pass and baggage tag handover at home.
-              </li>
-              <li class="text-left">
-                Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial,Helvetica Neue, Helvetica, sans-serif;">
-                  disinfected with a long-lasting protective coating
-                </span>
-              </li>
-            </ul>
-            <div class="package-img">
-              <img src="/assets/images/forfaits/package2.png" alt="2 package">
-            </div>
-            <div class="price-plan__adds">
-              <div class="text-left text-bold">
-                Enjoy a preferential rate on PCR testing for DT 250 per individual
-              </div>
-            </div>
-          </div>
-          <div class="price-plan__footer">
-            <div>Up to 4 bags</div>
-            <h4 class="price-plan__price color--primary text-center">
-              <b>249
-                <span class="text-up">DT</span>
-                <span class="text-small">(+5% VAT)</span>
-              </b>
-            </h4>
-            <button type="button" class="btn secondary" (click)="select(1)">
-              Select
-            </button>
-            <p class="availability">
-              Home Check-In is subject to airline choice and availability
-            </p>
-          </div>
-        </div>
-      </div>
-    </li>
-<!--//////////////////////// Package3 /////////////////////////////////-->
-<li class="r-column">
-      <div class="price-plan panel panel-default" [ngClass]="{'active': current[2]}">
-        <h4 class="price-plan__title color--primary">
-          <b>Plus Experience</b>
-          <span>(479 DT)</span>
-        </h4>
-        <span style="display: inline-block; margin-top: 0.5rem;">
-          <p style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;" class="subtitle">
-            Fast-track through the airport
-          </p>
-        </span>
-        <div class="price-plan__wrapper">
-          <div class="price-plan__body">
-            <ul class="price-plan__info">
-              <li class="text-left">
-                Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
-                  checked-in
-                </span>
-                to your flight, with boarding pass and baggage tag handover at home.
-              </li>
-              <li class="text-left">
-                Baggage to be
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
-                  disinfected with a long-lasting protective coating
-                </span>
-              </li>
-              <li class="text-left">
-                Speed through the airport with
-                <span style="color: #D31F49; font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica, sans-serif;">
-                  marhaba fast-track
-                </span>
-              </li>
-            </ul>
-            <div class="package-img">
-              <img src="/assets/images/forfaits/package3.png" alt="2 package">
-            </div><div class="price-plan__adds">
-              <div class="text-left text-bold">
-                Enjoy a preferential rate on PCR testing for DT 250 per individual
-              </div>
-            </div>
-          </div>
-          <div class="price-plan__footer">
-            <div>Up to 4 bags and 4 passengers</div>
-            <h4 class="price-plan__price color--primary text-center">
-              <b>479
-                <span class="text-up">DT</span>
-                <span class="text-small">(+5% VAT)</span>
-              </b>
-            </h4>
-            <button type="button" class="btn secondary" (click)="select(2)">
-              Select
-            </button>
-            <p class="availability">
-              Home Check-In is subject to airline choice and availability
-            </p>
-          </div>
-        </div>
-      </div>
-    </li>
-<!--/////////////////////////////////////////////////////////-->
-  </ul>
-</div>
-
-
-<!-- *********************************************2ème partie*************************************************-->
-
-<div class="main-form panel1 panel1-default">
-  <div class="main-form__section main-form__section--body additional-services--wrapper">
-    <h2 class="section-title section-title--tiny section-title--blue">
-      <b>Interested in our add-ons?</b>
-      <br>
-      <i class="section-title__subline color--text">
-        <b>You can add a variety of add-ons such as additional bags to your order</b>
-      </i>
-    </h2>
-
-    <div class="main-form__row">
-      <div class="form-line additional-services single">
-        <div class="serction-borders">
-        </div>
-        <ul class="radio-group" *ngFor="let service of additional_service">
-          <li>
-            <div class="additional-service-item r-row r-row--mobile r-row--reduced r-row--wrap">
-              <div class="additional-service-item__column r-column r-column-6">
-                <div class="checkbox-block">
-
-                  <div class="checkbox-block__wrapper">
-                    <input type="checkbox" id="{{service.id}}"  formControlName="{{service.id}}" >
-                    <span class="checkbox-block__mark">
-                      <svg class="svg-icon" viewBox="0 0 500 500" width="100%" height="100%">
-                        <path d="M492.7,76.1c-9.8-9.6-25.6-9.6-35.4,0L157.8,370.7L42.7,257.5c-9.8-9.6-25.6-9.6-35.4,0				c-9.8,9.6-9.8,25.2,0,34.8l132.8,130.6c9.8,9.6,25.6,9.6,35.4,0l317.2-311.9C502.4,101.3,502.4,85.7,492.7,76.1z"></path>
-                      </svg>
+            <span style="display: inline-block; margin-top: 0.5rem">
+              <p
+                style="
+                  color: #d31f49;
+                  font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica,
+                    sans-serif;
+                "
+                class="subtitle"
+              >
+                Travel hassle-free and baggage-free
+              </p>
+            </span>
+            <h5 class="price-plan__sub-title color--primary"></h5>
+            <div class="price-plan__wrapper">
+              <div class="price-plan__body">
+                <ul class="price-plan__info">
+                  <li class="text-left">
+                    Baggage to be
+                    <span
+                      style="
+                        color: #d31f49;
+                        font-family: Gotham-Medium, Arial, Helvetica Neue,
+                          Helvetica, sans-serif;
+                      "
+                    >
+                      checked-in
                     </span>
+                    to your flight, with boarding pass and baggage tag handover
+                    at home.
+                  </li>
+                </ul>
+                <div class="package-img">
+                  <img
+                    src="/assets/images/forfaits/package1.png"
+                    alt="1 package"
+                  />
+                </div>
+                <div class="price-plan__adds">
+                  <div class="text-left text-bold">
+                    Enjoy a preferential rate on PCR testing for DT 250 per
+                    individual
                   </div>
-
-                  <label class="checkbox-block__label">
-                    <div class="title">
-                      {{service.name}}
-                    </div>
-                    <p class="description">
-                      {{service.description}}
-                    </p>
-                  </label>
                 </div>
               </div>
-              <div class="additional-service-item__column r-column r-column-6">
-                <div class="additional-service-item__controls r-row r-row--align-center r-row--reduced">
-                  <div class="controls__column r-column r-column-7 qty-row">
-                    <div class="qty">
-                      qty
-                    </div>
-                    <div class="select-block select-block_animated changed ">
-                      <div class="select-block__inner">
-                        <select class="select-block__select" >
-                          <option *ngFor="let n of numbers" value="{{n}}" >
-                            {{n}}
-                          </option>
-                        </select>
+              <div class="price-plan__footer">
+                <div>Up to 4 bags</div>
+                <h4 class="price-plan__price color--primary text-center">
+                  <b
+                    >209
+                    <span class="text-up">DT</span>
+                    <span class="text-small">(+5% VAT)</span>
+                  </b>
+                </h4>
+                <button type="button" class="btn secondary" (click)="select(0)">
+                  Select
+                </button>
+                <p class="availability">
+                  Home Check-In is subject to airline choice and availability
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!--//////////////////////// Package2 /////////////////////////////////-->
+        <li class="r-column">
+          <div
+            class="price-plan panel panel-default"
+            [ngClass]="{ active: current[1] }"
+          >
+            <h4 class="price-plan__title color--primary">
+              <div class="margin-top-forfait"></div>
+              <b>Home Check-in &amp; Sanitization</b>
+              <span>(249 DT)</span>
+            </h4>
+            <span style="display: inline-block; margin-top: 0.5rem">
+              <p
+                style="
+                  color: #d31f49;
+                  font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica,
+                    sans-serif;
+                "
+                class="subtitle"
+              >
+                Protect your bags
+              </p>
+            </span>
+            <div class="price-plan__wrapper">
+              <div class="price-plan__body">
+                <ul class="price-plan__info">
+                  <li class="text-left">
+                    Baggage to be
+                    <span
+                      style="
+                        color: #d31f49;
+                        font-family: Gotham-Medium, Arial, Helvetica Neue,
+                          Helvetica, sans-serif;
+                      "
+                    >
+                      checked-in
+                    </span>
+                    to your flight, with boarding pass and baggage tag handover
+                    at home.
+                  </li>
+                  <li class="text-left">
+                    Baggage to be
+                    <span
+                      style="
+                        color: #d31f49;
+                        font-family: Gotham-Medium, Arial, Helvetica Neue,
+                          Helvetica, sans-serif;
+                      "
+                    >
+                      disinfected with a long-lasting protective coating
+                    </span>
+                  </li>
+                </ul>
+                <div class="package-img">
+                  <img
+                    src="/assets/images/forfaits/package2.png"
+                    alt="2 package"
+                  />
+                </div>
+                <div class="price-plan__adds">
+                  <div class="text-left text-bold">
+                    Enjoy a preferential rate on PCR testing for DT 250 per
+                    individual
+                  </div>
+                </div>
+              </div>
+              <div class="price-plan__footer">
+                <div>Up to 4 bags</div>
+                <h4 class="price-plan__price color--primary text-center">
+                  <b
+                    >249
+                    <span class="text-up">DT</span>
+                    <span class="text-small">(+5% VAT)</span>
+                  </b>
+                </h4>
+                <button type="button" class="btn secondary" (click)="select(1)">
+                  Select
+                </button>
+                <p class="availability">
+                  Home Check-In is subject to airline choice and availability
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!--//////////////////////// Package3 /////////////////////////////////-->
+        <li class="r-column">
+          <div
+            class="price-plan panel panel-default"
+            [ngClass]="{ active: current[2] }"
+          >
+            <h4 class="price-plan__title color--primary">
+              <div class="margin-top-forfait"></div>
+              <b>Plus Experience</b>
+              <span>(479 DT)</span>
+            </h4>
+            <span style="display: inline-block; margin-top: 0.5rem">
+              <p
+                style="
+                  color: #d31f49;
+                  font-family: Gotham-Medium, Arial, Helvetica Neue, Helvetica,
+                    sans-serif;
+                "
+                class="subtitle"
+              >
+                Fast-track through the airport
+              </p>
+            </span>
+            <div class="price-plan__wrapper">
+              <div class="price-plan__body">
+                <ul class="price-plan__info">
+                  <li class="text-left">
+                    Baggage to be
+                    <span
+                      style="
+                        color: #d31f49;
+                        font-family: Gotham-Medium, Arial, Helvetica Neue,
+                          Helvetica, sans-serif;
+                      "
+                    >
+                      checked-in
+                    </span>
+                    to your flight, with boarding pass and baggage tag handover
+                    at home.
+                  </li>
+                  <li class="text-left">
+                    Baggage to be
+                    <span
+                      style="
+                        color: #d31f49;
+                        font-family: Gotham-Medium, Arial, Helvetica Neue,
+                          Helvetica, sans-serif;
+                      "
+                    >
+                      disinfected with a long-lasting protective coating
+                    </span>
+                  </li>
+                  <li class="text-left">
+                    Speed through the airport with
+                    <span
+                      style="
+                        color: #d31f49;
+                        font-family: Gotham-Medium, Arial, Helvetica Neue,
+                          Helvetica, sans-serif;
+                      "
+                    >
+                      marhaba fast-track
+                    </span>
+                  </li>
+                </ul>
+                <div class="package-img">
+                  <img
+                    src="/assets/images/forfaits/package3.png"
+                    alt="2 package"
+                  />
+                </div>
+                <div class="price-plan__adds">
+                  <div class="text-left text-bold">
+                    Enjoy a preferential rate on PCR testing for DT 250 per
+                    individual
+                  </div>
+                </div>
+              </div>
+              <div class="price-plan__footer">
+                <div>Up to 4 bags and 4 passengers</div>
+                <h4 class="price-plan__price color--primary text-center">
+                  <b
+                    >479
+                    <span class="text-up">DT</span>
+                    <span class="text-small">(+5% VAT)</span>
+                  </b>
+                </h4>
+                <button type="button" class="btn secondary" (click)="select(2)">
+                  Select
+                </button>
+                <p class="availability">
+                  Home Check-In is subject to airline choice and availability
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!--/////////////////////////////////////////////////////////-->
+      </ul>
+    </div>
 
+    <!-- *********************************************2ème partie*************************************************-->
 
-                        <span class="select-block__value">
-                          1
-                        </span>
-                        <span class="select-block__icon">
-                          <svg class="svg-icon" viewBox="0 0 500 500" width="100%" height="100%">
-                            <path d="M250,397c-8.8,0-17.6-3.5-24.3-10.6L15.1,164.7c-13.4-14.1-13.4-37,0-51.1c13.4-14.1,35.1-14.1,48.5,0				L250,309.8l186.4-196.2c13.4-14.1,35.1-14.1,48.5,0c13.4,14.1,13.4,37,0,51.1L274.3,386.4C267.6,393.5,258.8,397,250,397z"></path>
+    <div class="main-form panel1 panel1-default">
+      <div
+        class="main-form__section main-form__section--body additional-services--wrapper"
+      >
+        <h2 class="section-title section-title--tiny section-title--blue">
+          <b>Interested in our add-ons?</b>
+          <br />
+          <i class="section-title__subline color--text">
+            <b
+              >You can add a variety of add-ons such as additional bags to your
+              order</b
+            >
+          </i>
+        </h2>
+
+        <div class="main-form__row">
+          <div class="form-line additional-services single">
+            <div class="serction-borders"></div>
+            <ul class="radio-group" *ngFor="let service of additional_service">
+              <li>
+                <div
+                  class="additional-service-item r-row r-row--mobile r-row--reduced r-row--wrap"
+                >
+                  <div
+                    class="additional-service-item__column r-column r-column-6"
+                  >
+                    <div class="checkbox-block">
+                      <div class="checkbox-block__wrapper">
+                        <input
+                          type="checkbox"
+                          id="{{ service.id }}"
+                          formControlName="{{ service.id }}"
+                        />
+                        <span class="checkbox-block__mark">
+                          <svg
+                            class="svg-icon"
+                            viewBox="0 0 500 500"
+                            width="100%"
+                            height="100%"
+                          >
+                            <path
+                              d="M492.7,76.1c-9.8-9.6-25.6-9.6-35.4,0L157.8,370.7L42.7,257.5c-9.8-9.6-25.6-9.6-35.4,0				c-9.8,9.6-9.8,25.2,0,34.8l132.8,130.6c9.8,9.6,25.6,9.6,35.4,0l317.2-311.9C502.4,101.3,502.4,85.7,492.7,76.1z"
+                            ></path>
                           </svg>
                         </span>
+                      </div>
 
+                      <label class="checkbox-block__label">
+                        <div class="title">
+                          {{ service.name }}
+                        </div>
+                        <p class="description">
+                          {{ service.description }}
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+                  <div
+                    class="additional-service-item__column r-column r-column-6"
+                  >
+                    <div
+                      class="additional-service-item__controls r-row r-row--align-center r-row--reduced"
+                    >
+                      <div class="controls__column r-column r-column-7 qty-row">
+                        <div class="qty">qty</div>
+                        <div class="select-block select-block_animated changed">
+                          <div class="select-block__inner">
+                            <select class="select-block__select">
+                              <option *ngFor="let n of numbers" value="{{ n }}">
+                                {{ n }}
+                              </option>
+                            </select>
+
+                            <span class="select-block__value"> 1 </span>
+                            <span class="select-block__icon">
+                              <svg
+                                class="svg-icon"
+                                viewBox="0 0 500 500"
+                                width="100%"
+                                height="100%"
+                              >
+                                <path
+                                  d="M250,397c-8.8,0-17.6-3.5-24.3-10.6L15.1,164.7c-13.4-14.1-13.4-37,0-51.1c13.4-14.1,35.1-14.1,48.5,0				L250,309.8l186.4-196.2c13.4-14.1,35.1-14.1,48.5,0c13.4,14.1,13.4,37,0,51.1L274.3,386.4C267.6,393.5,258.8,397,250,397z"
+                                ></path>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="controls__column r-column r-column-5 text-right f-grow-1"
+                      >
+                        <b class="color--primary text-up price">
+                          <b class="dt"> dt </b>
+                          <b class="addon_price">
+                            {{ service.price }}
+                          </b>
+                          <span class="text-small"> (+5% VAT) </span>
+                        </b>
                       </div>
                     </div>
                   </div>
-                  <div class="controls__column r-column r-column-5 text-right f-grow-1">
-                    <b class="color--primary text-up price">
-                      <b class="dt">
-                        dt
-                      </b>
-                      <b class="addon_price">
-                        {{service.price}}
-                      </b>
-                      <span class="text-small">
-                        (+5% VAT)
-                      </span>
-                    </b>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-form__section main-form__section--footer">
+        <div class="main-form__row">
+          <div class="column text-right">
+            <button
+              id="HCIBtnNextStep0"
+              type="submit"
+              class="btn btn-shadow primary"
+            >
+              Next
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="main-form__section main-form__section--footer">
-    <div class="main-form__row">
-      <div class="column text-right">
-        <button id="HCIBtnNextStep0" type="submit" class="btn btn-shadow primary">
-          Next
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-</form>
+  </form>
 </div>

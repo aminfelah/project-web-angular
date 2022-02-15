@@ -1,229 +1,264 @@
 <div class="col-md-12 paddingtop">
   <div class="card card-container">
-    <div *ngIf="!imageSrc" >
-    <img
-      id="profile-img"
-      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-      
-    />
-  </div>
-    <div *ngIf="imageSrc" >
-     
-      <img id="profile-img" [src]="imageSrc | sanitizerUrl" alt="your image" class="profile-img-card my-pic-size"/>
+    <div *ngIf="!imageSrc">
+      <img
+        id="profile-img"
+        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+        class="rounded-corners"
+      />
     </div>
-    <div class="row">
+    <div *ngIf="imageSrc">
+      <img
+        id="profile-img"
+        [src]="imageSrc | sanitizerUrl"
+        alt="your image"
+        class="profile-img-card my-pic-size rounded-corners"
+      />
+    </div>
+    <div class="row margin-upload-btn">
       <div class="col-8">
-        <label class="btn btn-default p-0">
+        <label class="custom-file-upload">
           <input type="file" (change)="selectFile($event)" />
         </label>
       </div>
-     
-      
-      
     </div>
-    
-  
-    
-    
+
     <form
       *ngIf="!isSuccessful"
+      class="col-md-6 col-sm-6 col-lg-6 margin-form"
       name="form"
       (ngSubmit)="f.form.valid && onSubmit()"
       #f="ngForm"
       novalidate
     >
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input
-          type="text"
-          class="form-control"
-          name="username"
-          [(ngModel)]="form.username"
-          required
-          minlength="3"
-          maxlength="20"
-          #username="ngModel"
-        />
-        <div class="alert-danger" *ngIf="username.errors && f.submitted">
-          <div *ngIf="username.errors['required']">Username is required</div>
-          <div *ngIf="username.errors['minlength']">
-            Username must be at least 3 characters
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            [(ngModel)]="form.username"
+            required
+            minlength="3"
+            maxlength="20"
+            #username="ngModel"
+          />
+          <span class="input-block__placeholder"> Username </span>
+          <div class="alert-danger" *ngIf="username.errors && f.submitted">
+            <div *ngIf="username.errors['required']">Username is required</div>
+            <div *ngIf="username.errors['minlength']">
+              Username must be at least 3 characters
+            </div>
+            <div *ngIf="username.errors['maxlength']">
+              Username must be at most 20 characters
+            </div>
           </div>
-          <div *ngIf="username.errors['maxlength']">
-            Username must be at most 20 characters
+        </div>
+      </div>
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <input
+            type="text"
+            class="form-control"
+            name="firstname"
+            [(ngModel)]="form.firstname"
+            required
+            minlength="3"
+            maxlength="20"
+            #firstname="ngModel"
+          />
+          <span class="input-block__placeholder"> Firstname </span>
+          <div class="alert-danger" *ngIf="firstname.errors && f.submitted">
+            <div *ngIf="firstname.errors['required']">
+              Firstname is required
+            </div>
+            <div *ngIf="firstname.errors['minlength']">
+              Firstname must be at least 3 characters
+            </div>
+            <div *ngIf="firstname.errors['maxlength']">
+              Firstname must be at most 20 characters
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-----------------------------------------last-name----------------------------------------->
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <span class="input-block__placeholder"> Lastname </span>
+          <input
+            type="text"
+            class="form-control"
+            name="lastname"
+            [(ngModel)]="form.lastname"
+            required
+            minlength="3"
+            maxlength="20"
+            #lastname="ngModel"
+          />
+          <div class="alert-danger" *ngIf="lastname.errors && f.submitted">
+            <div *ngIf="lastname.errors['required']">Lastname is required</div>
+            <div *ngIf="lastname.errors['minlength']">
+              Lastname must be at least 3 characters
+            </div>
+            <div *ngIf="lastname.errors['maxlength']">
+              Lastname must be at most 20 characters
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------date of birth ---------------------------------------->
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <span class="input-block__placeholder"> date Of Birth </span>
+
+          <input
+            type="text"
+            class="form-control"
+            name="dateOfBirth"
+            [(ngModel)]="form.dateOfBirth"
+            required
+            minlength="3"
+            maxlength="20"
+            #dateOfBirth="ngModel"
+          />
+          <div class="alert-danger" *ngIf="dateOfBirth.errors && f.submitted">
+            <div *ngIf="dateOfBirth.errors['required']">
+              dateOfBirth is required
+            </div>
+            <div *ngIf="dateOfBirth.errors['minlength']">
+              dateOfBirth must be at least 3 characters
+            </div>
+            <div *ngIf="dateOfBirth.errors['maxlength']">
+              dateOfBirth must be at most 20 characters
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------------ Email ---------------------------------------->
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <span class="input-block__placeholder"> Email</span>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="form.email"
+            required
+            email
+            #email="ngModel"
+          />
+          <div class="alert-danger" *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors['required']">Email is required</div>
+            <div *ngIf="email.errors['email']">
+              Email must be a valid email address
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------------ Password ---------------------------------------->
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <span class="input-block__placeholder"> Password</span>
+
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            [(ngModel)]="form.password"
+            required
+            minlength="6"
+            #password="ngModel"
+          />
+          <div class="alert-danger" *ngIf="password.errors && f.submitted">
+            <div *ngIf="password.errors['required']">Password is required</div>
+            <div *ngIf="password.errors['minlength']">
+              Password must be at least 6 characters
+            </div>
+          </div>
+        </div>
+        <!------------------------------ Residence ---------------------------------------->
+        <div class="form-line form-group">
+          <div class="input-block input-block_animated">
+            <span class="input-block__placeholder"> Residence</span>
+            <input
+              type="text"
+              class="form-control"
+              name="residence"
+              [(ngModel)]="form.residence"
+              required
+              minlength="3"
+              maxlength="20"
+              #residence="ngModel"
+            />
+            <div class="alert-danger" *ngIf="residence.errors && f.submitted">
+              <div *ngIf="residence.errors['required']">
+                residence is required
+              </div>
+              <div *ngIf="residence.errors['minlength']">
+                residence must be at least 3 characters
+              </div>
+              <div *ngIf="residence.errors['maxlength']">
+                residence must be at most 20 characters
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------------------- Adress ---------------------------------------->
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <span class="input-block__placeholder">Adress</span>
+          <input
+            type="text"
+            class="form-control"
+            name="adress"
+            [(ngModel)]="form.adress"
+            required
+            minlength="3"
+            maxlength="20"
+            #adress="ngModel"
+          />
+          <div class="alert-danger" *ngIf="adress.errors && f.submitted">
+            <div *ngIf="adress.errors['required']">adress is required</div>
+            <div *ngIf="adress.errors['minlength']">
+              adress must be at least 3 characters
+            </div>
+            <div *ngIf="adress.errors['maxlength']">
+              adress must be at most 20 characters
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------------------- phonenumber ---------------------------------------->
+      <div class="form-line form-group">
+        <div class="input-block input-block_animated">
+          <span class="input-block__placeholder">phonenumber</span>
+
+          <input
+            type="text"
+            class="form-control"
+            name="phonenumber"
+            [(ngModel)]="form.phonenumber"
+            required
+            minlength="3"
+            maxlength="20"
+            #phonenumber="ngModel"
+          />
+          <div class="alert-danger" *ngIf="phonenumber.errors && f.submitted">
+            <div *ngIf="phonenumber.errors['required']">
+              phonenumber is required
+            </div>
+            <div *ngIf="phonenumber.errors['minlength']">
+              phonenumber must be at least 3 characters
+            </div>
+            <div *ngIf="phonenumber.errors['maxlength']">
+              phonenumber must be at most 20 characters
+            </div>
           </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="firstname">Firstname</label>
-        <input
-          type="text"
-          class="form-control"
-          name="firstname"
-          [(ngModel)]="form.firstname"
-          required
-          minlength="3"
-          maxlength="20"
-          #firstname="ngModel"
-        />
-        <div class="alert-danger" *ngIf="firstname.errors && f.submitted">
-          <div *ngIf="firstname.errors['required']">Firstname is required</div>
-          <div *ngIf="firstname.errors['minlength']">
-            Firstname must be at least 3 characters
-          </div>
-          <div *ngIf="firstname.errors['maxlength']">
-            Firstname must be at most 20 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="lastname">Lastname</label>
-        <input
-          type="text"
-          class="form-control"
-          name="lastname"
-          [(ngModel)]="form.lastname"
-          required
-          minlength="3"
-          maxlength="20"
-          #lastname="ngModel"
-        />
-        <div class="alert-danger" *ngIf="lastname.errors && f.submitted">
-          <div *ngIf="lastname.errors['required']">Lastname is required</div>
-          <div *ngIf="lastname.errors['minlength']">
-            Lastname must be at least 3 characters
-          </div>
-          <div *ngIf="lastname.errors['maxlength']">
-            Lastname must be at most 20 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="dateOfBirth">dateOfBirth</label>
-        <input
-          type="text"
-          class="form-control"
-          name="dateOfBirth"
-          [(ngModel)]="form.dateOfBirth"
-          required
-          minlength="3"
-          maxlength="20"
-          #dateOfBirth="ngModel"
-        />
-        <div class="alert-danger" *ngIf="dateOfBirth.errors && f.submitted">
-          <div *ngIf="dateOfBirth.errors['required']">dateOfBirth is required</div>
-          <div *ngIf="dateOfBirth.errors['minlength']">
-            dateOfBirth must be at least 3 characters
-          </div>
-          <div *ngIf="dateOfBirth.errors['maxlength']">
-            dateOfBirth must be at most 20 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          name="email"
-          [(ngModel)]="form.email"
-          required
-          email
-          #email="ngModel"
-        />
-        <div class="alert-danger" *ngIf="email.errors && f.submitted">
-          <div *ngIf="email.errors['required']">Email is required</div>
-          <div *ngIf="email.errors['email']">
-            Email must be a valid email address
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          name="password"
-          [(ngModel)]="form.password"
-          required
-          minlength="6"
-          #password="ngModel"
-        />
-        <div class="alert-danger" *ngIf="password.errors && f.submitted">
-          <div *ngIf="password.errors['required']">Password is required</div>
-          <div *ngIf="password.errors['minlength']">
-            Password must be at least 6 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="residence">residence</label>
-        <input
-          type="text"
-          class="form-control"
-          name="residence"
-          [(ngModel)]="form.residence"
-          required
-          minlength="3"
-          maxlength="20"
-          #residence="ngModel"
-        />
-        <div class="alert-danger" *ngIf="residence.errors && f.submitted">
-          <div *ngIf="residence.errors['required']">residence is required</div>
-          <div *ngIf="residence.errors['minlength']">
-            residence must be at least 3 characters
-          </div>
-          <div *ngIf="residence.errors['maxlength']">
-            residence must be at most 20 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="adress">adress</label>
-        <input
-          type="text"
-          class="form-control"
-          name="adress"
-          [(ngModel)]="form.adress"
-          required
-          minlength="3"
-          maxlength="20"
-          #adress="ngModel"
-        />
-        <div class="alert-danger" *ngIf="adress.errors && f.submitted">
-          <div *ngIf="adress.errors['required']">adress is required</div>
-          <div *ngIf="adress.errors['minlength']">
-            adress must be at least 3 characters
-          </div>
-          <div *ngIf="adress.errors['maxlength']">
-            adress must be at most 20 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="phonenumber">phonenumber</label>
-        <input
-          type="text"
-          class="form-control"
-          name="phonenumber"
-          [(ngModel)]="form.phonenumber"
-          required
-          minlength="3"
-          maxlength="20"
-          #phonenumber="ngModel"
-        />
-        <div class="alert-danger" *ngIf="phonenumber.errors && f.submitted">
-          <div *ngIf="phonenumber.errors['required']">phonenumber is required</div>
-          <div *ngIf="phonenumber.errors['minlength']">
-            phonenumber must be at least 3 characters
-          </div>
-          <div *ngIf="phonenumber.errors['maxlength']">
-            phonenumber must be at most 20 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary btn-block">Sign Up</button>
+        <button class="custom-Sign-up">Sign Up</button>
       </div>
 
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">

@@ -43,7 +43,7 @@ img {
 }
 .about-text p mark {
   font-weight: 600;
-  color: #20247b;
+  color: #843561;
 }
 
 .about-list {
@@ -53,7 +53,7 @@ img {
   padding: 5px 0;
 }
 .about-list label {
-  color: #20247b;
+  color: #843561;
   font-weight: 600;
   width: 88px;
   margin: 0;
@@ -67,7 +67,7 @@ img {
   right: 11px;
   width: 1px;
   height: 12px;
-  background: #20247b;
+  background: #843561;
   -moz-transform: rotate(15deg);
   -o-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
@@ -116,8 +116,8 @@ mark {
     color: currentColor;
 }
 .theme-color {
-    color: #fc5356;
+    color: #20247b;
 }
 .dark-color {
-    color: #20247b;
+    color: #843561;
 }

@@ -1,0 +1,113 @@
+.about{
+    margin: 10%;
+}
+
+.about-left-side{
+    width: 50%;
+    padding-right: 2.5%;
+}
+
+.about-right-side{
+    padding-left: 2.5%;
+    width: 50%;
+}
+
+.about-title{
+    font-weight: 100;
+    font-family: 'Heebo';
+    font-size: 60px;
+    font-weight: bolder;
+    
+}
+
+.about-subtitle{
+    font-style: italic;
+    font-family: 'Heebo';
+    font-size: 18px;
+}
+
+.about-hr{
+    width: 100px;
+    color: #ED093E;
+    opacity: 1;
+}
+
+.about-text{
+    font-family: "Heebo";
+    font-size: 16px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1250px) {
+    .about-image{
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .about-image{
+        height: 350px;
+    }
+    .about-title{
+        font-size: 50px;
+    }
+    
+    .about-subtitle{
+        font-size: 16px;
+    }
+    
+    .about-text{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .about-image{
+        height: 200px;
+    }
+    .about-title{
+        font-size: 40px;
+    }
+    
+    .about-subtitle{
+        font-size: 14px;
+    }
+    
+    .about-text{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about-image{
+        display: none;
+    }
+    .about-title{
+        font-size: 40px;
+    }
+    
+    .about-subtitle{
+        font-size: 14px;
+    }
+    
+    .about-text{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-title{
+        font-size: 30px;
+    }
+    
+    .about-subtitle{
+        font-size: 14px;
+    }
+    
+    .about-text{
+        font-size: 12px;
+    }
+}
+.title-color{
+    color: #000;
+}

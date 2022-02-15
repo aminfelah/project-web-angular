@@ -1,0 +1,27 @@
+.background-image-home{
+    background-image: url("/assets/images/airlines/head-background.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+    height: 600px;
+}
+
+@media screen and (max-width: 700px) {
+    .background-image-home{
+        background-size: 100% 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .background-image-home{
+        background-size: 100% 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .background-image-home{
+        background-size: 100% 100px;
+        height: 100px;
+    }
+}

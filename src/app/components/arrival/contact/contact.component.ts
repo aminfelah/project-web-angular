@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
 import { ArrivalOrderService } from 'src/app/services/arrival-order.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 
 @Component({
@@ -11,15 +12,17 @@ import { ArrivalOrderService } from 'src/app/services/arrival-order.service';
 })
 export class ContactComponent implements OnInit {
 
+  currentUser=this.token.getUser();
   contactForm=this.formBuilder.group({
-    firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
-    email: ['', Validators.required],
-    phoneNumber: ['', Validators.required]
+    firstName: [this.currentUser.user.firstname, Validators.required],
+    lastName: [this.currentUser.user.lastname, Validators.required],
+    email: [this.currentUser.user.email, Validators.required],
+    phoneNumber: [this.currentUser.user.phonenumber, Validators.required]
   });
   constructor(private formBuilder: FormBuilder ,
               private router:Router,
-              private arrivalService: ArrivalOrderService) { }
+              private arrivalService: ArrivalOrderService,
+              private token: TokenStorageService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {

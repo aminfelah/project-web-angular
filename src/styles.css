@@ -43,7 +43,7 @@ a,a:hover,a:active,a:focus {
 
 }
 
-h1,h2,h3,h4,h5,h6 { 
+h1,h2,h3,h4,h5,h6 {
 
 	margin: 0;
 	color:#222222;
@@ -73,7 +73,7 @@ ul li {
 
 	list-style: none;
 
-	
+
 
 }
 
@@ -92,11 +92,11 @@ html,body{
 
 [placeholder]:focus::-webkit-input-placeholder {
 
-  -webkit-transition: opacity 0.3s 0.3s ease; 
-  -moz-transition: opacity 0.3s 0.3s ease; 
-  -ms-transition: opacity 0.3s 0.3s ease; 
-  -o-transition: opacity 0.3s 0.3s ease; 
-  transition: opacity 0.3s 0.3s ease; 
+  -webkit-transition: opacity 0.3s 0.3s ease;
+  -moz-transition: opacity 0.3s 0.3s ease;
+  -ms-transition: opacity 0.3s 0.3s ease;
+  -o-transition: opacity 0.3s 0.3s ease;
+  transition: opacity 0.3s 0.3s ease;
   opacity: 0;
 
 }
@@ -111,10 +111,10 @@ html,body{
 .top-area {
     position: fixed;
     top: 0;
-    
+
     width: 100%;
     z-index: 100000 ;
-    
+
 }
 .navbar-background {
     background-color: #D31F49 !important;
@@ -221,11 +221,11 @@ html,body{
     -moz-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    
+
 }
 .main-menu .nav li.active  a:before,
 .main-menu .nav a:hover:before{
-   
+
     width: 100%;
 }
 
@@ -241,7 +241,7 @@ html,body{
 .main-menu .navbar-toggle {
     color: #843561;
 }
-.main-menu .navbar-default .navbar-toggle:focus, 
+.main-menu .navbar-default .navbar-toggle:focus,
 .main-menu .navbar-default .navbar-toggle:hover {
     background-color: transparent;
 }
@@ -253,7 +253,7 @@ html,body{
 
 /*book-btn*/
 .book-btn {
-    
+
 	background: #84356100;
     border: 1px solid #ffffff;
     width: 120px;
@@ -306,7 +306,7 @@ html,body{
 	margin: -175px 0 0 0;
 }
 .about-us h2 {
-	color:#fff;	
+	color:#fff;
 	font-size:84px;
 	text-transform: inherit;
 	max-width: 800px;
@@ -386,13 +386,13 @@ html,body{
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
-    -webkit-transition: .5s; 
-	-moz-transition:.5s; 
-	-ms-transition:.5s; 
+    -webkit-transition: .5s;
+	-moz-transition:.5s;
+	-ms-transition:.5s;
 	-o-transition:.5s;
     transition: .5s;
 }
-.desc-tabs .nav-tabs>li.active>a:focus, 
+.desc-tabs .nav-tabs>li.active>a:focus,
 .desc-tabs .nav-tabs>li.active>a:hover {
     color: #843561;
     text-decoration: none;
@@ -407,13 +407,13 @@ html,body{
     text-transform: capitalize;
     padding: 17px 40px 17px 46px;
     border: 0;
-    -webkit-transition: .5s; 
-	-moz-transition:.5s; 
-	-ms-transition:.5s; 
+    -webkit-transition: .5s;
+	-moz-transition:.5s;
+	-ms-transition:.5s;
 	-o-transition:.5s;
     transition: .5s;
 }
-.single-travel-boxes .nav>li>a:focus, 
+.single-travel-boxes .nav>li>a:focus,
 .single-travel-boxes .nav>li>a:hover {
 	color: #843561;
 	background: #fff;
@@ -647,7 +647,7 @@ html,body{
     margin-left: 7px;
     margin-top: 6px;
     margin:6px 0 30px 7px;
-    
+
 }
 .service-content h2 a{
     color:#565a5c;
@@ -681,7 +681,7 @@ html,body{
 /* gallary-header  */
 .gallary-header h2{
     position:relative;
-    color:#565a5c;  
+    color:#565a5c;
     font-size:30px;
     font-weight:500;
     text-transform:capitalize;
@@ -690,7 +690,7 @@ html,body{
 }
 .gallary-header p{
     position:relative;
-    color:#aaa;  
+    color:#aaa;
     font-size:16px;
     font-family: 'Poppins', sans-serif;
     margin-top: 17px;
@@ -849,7 +849,7 @@ html,body{
 }/*.discount-offer-btn*/
 
 /*-------------------------------------
-        8. Packages 
+        8. Packages
 --------------------------------------*/
 .packages{
     padding:120px 0 90px;
@@ -862,9 +862,9 @@ html,body{
     margin-bottom: 30px;
     padding-bottom: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,.1);
-    -webkit-transition: .5s; 
-    -moz-transition:.5s; 
-    -ms-transition:.5s; 
+    -webkit-transition: .5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
     -o-transition:.5s;
     transition: .5s;
 }
@@ -922,9 +922,9 @@ html,body{
     font-size: 14px;
     color: #fff;
     text-transform: capitalize;
-    -webkit-transition: .5s; 
-    -moz-transition:.5s; 
-    -ms-transition:.5s; 
+    -webkit-transition: .5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
     -o-transition:.5s;
     transition: .5s;
 
@@ -938,7 +938,7 @@ html,body{
 /*single-package-item */
 
 /*-------------------------------------
-        9. Testemonial 
+        9. Testemonial
 --------------------------------------*/
 
 .testemonial{
@@ -953,9 +953,9 @@ html,body{
     background: #fff;
     padding: 50px 0;
     box-shadow: 0 0 20px rgba(0,0,0,.1);
-    -webkit-transition: .5s; 
-    -moz-transition:.5s; 
-    -ms-transition:.5s; 
+    -webkit-transition: .5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
     -o-transition:.5s;
     transition: .5s;
 }
@@ -990,7 +990,7 @@ html,body{
     height: 15px;
     margin: 5px 3px;
     border-radius:50%;
-    background: #aaa; 
+    background: #aaa;
 }
 .testemonial .owl-theme .owl-dots .owl-dot.active span{
     background: #00d8ff;
@@ -1159,7 +1159,7 @@ html,body{
 /*blog-content*/
 .blog-content {
     margin-top: 66px;
-    
+
 }
 .blog-content .thumbnail {
     background:transparent;
@@ -1226,7 +1226,7 @@ html,body{
 }
 .blog-content .thumbnail:hover  .caption {
     border:transparent;
-    
+
 }
 .blog-txt {
     margin-top:8px;
@@ -1283,7 +1283,7 @@ html,body{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     line-height: 1.4;
-    
+
 }
 .subscribe-title p{
     color:#fff;
@@ -1410,7 +1410,7 @@ html,body{
 .footer-logo a>span {
     color: #843561;
     text-transform: capitalize;
-} 
+}
 .footer-logo p{
     color: #aaa;
     font-size:16px;
@@ -1426,12 +1426,12 @@ html,body{
 .single-footer-txt p a{
     color:#565a5c;
     font-size:16px;
-    -webkit-transition: .5s ease-in-out; 
-    -moz-transition:.5s ease-in-out; 
-    -ms-transition:.5s ease-in-out; 
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition:.5s ease-in-out;
+    -ms-transition:.5s ease-in-out;
     -o-transition:.5s ease-in-out;
     transition: .5s ease-in-out;
-    
+
 }
 .single-footer-txt p a:hover{
     -webkit-transition:scaleX(1.2);
@@ -1525,9 +1525,9 @@ html,body{
     background:#843561;
 	border:1px solid #843561;
 	border-radius:5px;
-	-webkit-transition: .5s; 
-	-moz-transition:.5s; 
-	-ms-transition:.5s; 
+	-webkit-transition: .5s;
+	-moz-transition:.5s;
+	-ms-transition:.5s;
 	-o-transition:.5s;
     transition: .5s;
 	z-index: 2;

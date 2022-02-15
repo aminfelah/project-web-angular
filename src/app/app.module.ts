@@ -82,7 +82,7 @@ import { PaymentFormComponent } from './components/payment-form/payment-form.com
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-  
+
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
@@ -118,10 +118,10 @@ import { PaymentFormComponent } from './components/payment-form/payment-form.com
     PaymentMethodsComponent,
     ReservationSuccessComponent,
     PaymentFormComponent
-    
-    
 
- 
+
+
+
   ],
   imports: [
     BrowserModule,

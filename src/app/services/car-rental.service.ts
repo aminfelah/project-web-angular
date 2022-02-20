@@ -22,11 +22,11 @@ export class CarRentalService {
     car_id!:  string;
 
 
-  httpOptions = {
-  	headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
+    httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
 
   constructor(private http : HttpClient) { }
 

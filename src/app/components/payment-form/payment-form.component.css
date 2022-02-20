@@ -44,7 +44,7 @@ p {
 }
 
 .form-control {
-    color: white;
+    color: rgb(255, 255, 255)   ;
     background-color: #843561;
     border: 2px solid transparent;
     height: 60px;
@@ -53,8 +53,8 @@ p {
 }
 
 .form-control:focus {
-    color: white;
-    background-color: #c890d6;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
     border: 2px solid #a92dda;
     box-shadow: none
 }

@@ -31,8 +31,6 @@
               "src/assets/css/datepicker.css",
               "src/assets/css/font-awesome.min.css",
               "src/assets/css/hover-min.css",
-              "src/assets/css/jquery-ui.min.css",
-              "src/assets/css/owl.carousel.min.css",
               "src/assets/css/owl.theme.default.min.css",
               "src/assets/css/responsive.css"
             ],
@@ -56,13 +54,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "30kb",
+                  "maximumError": "30kb"
                 }
               ],
               "fileReplacements": [
